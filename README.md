@@ -1,6 +1,9 @@
 # international-electricity
 
-Generating international electricity mixes for the [Federal LCA Commons](lcacommons.gov)
+Generating international electricity mixes for the [Federal LCA Commons](lcacommons.gov).
+Data are sourced from [Ember](https://ember-energy.org/data/yearly-electricity-data/).
+
+See the [list of countries](country_list.md)
 
 ## Install
 
