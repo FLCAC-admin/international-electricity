@@ -1,0 +1,132 @@
+Years:
+  - 2022
+  - 2023
+
+## Flows to link to eLCI
+Process:
+  FlowName: 'Electricity, AC, 2300-7650 V'
+  FlowUUID: 'fc406690-160c-37d5-bf36-added9542164'
+  FlowContext: 'Technosphere Flows / 22: Utilities / 2211: Electric Power Generation, Transmission and Distribution'
+  Unit: 'MJ'
+  ProcessName: 'Electricity; at grid; generation mix - <location>'
+  ProcessCategory: '22: Utilities / 2211: Electric Power Generation, Transmission and Distribution'
+
+  # 'Electricity; at user; consumption mix - <location>'
+  # 'Electricity, AC, 120 V'
+  # '3bca3bc6-2443-3184-8976-72dc98d258f6'
+
+## Ember fuel categories
+Fuel:
+  Bioenergy:
+    ProcessName: 'Electricity - BIOMASS - US'
+    UUID: 'c76033d9-1ac2-3975-b8f3-cbaef8892e75'
+
+  Coal:
+    ProcessName: 'Electricity - COAL - US'
+    UUID: '1a4cda28-2d34-3c33-9f94-e2aa49b7fca5'
+
+  Gas: 
+    ProcessName: 'Electricity - GAS - US'
+    UUID: 'af0efb53-bbfe-3b45-9ad7-ecc9d6ddfd74'
+
+  Hydro:
+    ProcessName: 'Electricity - HYDRO - US'
+    UUID: '84976f72-00ef-34a0-aa4b-25e4d1b6d561'
+
+  Nuclear:
+    ProcessName: 'Electricity - NUCLEAR - US'
+    UUID: '31cf98ad-c9a3-3c32-ae20-1615683dfdc1'
+
+  Other Fossil:
+    ProcessName: 'Electricity - OIL - US'
+    UUID: '675b255f-6eb1-3414-90a0-790c582cb622'
+
+  Solar:
+    ProcessName: 'Electricity - SOLAR - US'
+    UUID: '9d8ad430-506f-375c-8f9f-fd8c09de1760'
+
+  Wind:
+    ProcessName: 'Electricity - WIND - US'
+    UUID: 'ff34ff9f-78f1-350f-a289-fddaa0d3f6cb'
+
+  Other Renewables:
+    ProcessName: 'Electricity - GEOTHERMAL - US'
+    UUID: '27637316-f001-3de6-808c-1955d718adcd'
+
+DQI:
+  dqSystem:
+    Process:
+      Federal LCA Commons Core Database: 'US EPA - Process Pedigree Matrix'
+    Flow:
+      Federal LCA Commons Core Database: 'US EPA - Flow Pedigree Matrix' 
+
+  Process:
+    Process review:
+      score: 4
+      description: > 
+        No documentation of review of Ember Climate data.
+        Process data have been internally reviewed.
+    
+    Process completeness:
+      score: 1
+      description: All flows have been evaluated and given a value.
+
+    # # EPA DQI category
+    # Range data completeness:
+    #   score: 5
+    #   description: No range data provided for flows.
+
+    # # EPA DQA Data Attributes
+    # Reproducibility:
+    #   score: 2
+    #   description: >
+    #     Code and calculations are fully transparent based on a public data
+    #     source. But the modeling of the data source is not transparent.
+
+    # Free to use:
+    #   score: 1
+    #   description: Data are made available on the FLCAC.
+
+    # Interoperable:
+    #   score: 1
+    #   description: Intended for use with the U.S. Electricity Baseline (FLCAC).
+
+    # Maintained:
+    #   score: 1
+    #   description: Data will be reproduced annually.
+
+  Flow:
+    Flow reliability:
+      score: 2
+      description: >
+        Assumes that country or international sources of generation data are
+        verified.
+
+    Temporal correlation:
+      score: 1 # assess automatically based on eLCI year?
+      description: Within 3 years of the year of the electricity baseline.
+
+    Geographical correlation:
+      score: 4
+      description: >
+        Generation data use U.S. based generators instead of country specific
+        generators.
+
+    Technological correlation:
+      score: 1 # For Other Fossil and Other Renewables set as 2
+      description: >
+        Generating technologies match directly those used in the electricity baseline,
+        except in some cases.
+
+    Data collection methods:
+      score: 1
+      description: >
+        Assumes that country or international data sources are representative of
+        full market. 
+
+Review:
+  review_type: 'Dependent internal review'
+  reviewers:
+    - USLCI: 'Franklin Associates, A Division of ERG'
+  details: >
+    details of review performed go here
