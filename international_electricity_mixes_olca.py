@@ -9,8 +9,10 @@ import yaml
 from esupy.util import make_uuid
 
 parent_path = Path(__file__).parent
+data_path = parent_path / 'data'
+out_path = parent_path / 'output'
 
-with open(parent_path / 'electricity.yaml') as f:
+with open(data_path / 'electricity.yaml') as f:
     meta = yaml.safe_load(f)
 years = meta['Years']
 
@@ -18,9 +20,9 @@ years = meta['Years']
 # https://ember-climate.org/data-catalogue/yearly-electricity-data/
 # data_url = 'https://ember-climate.org/app/uploads/2022/07/yearly_full_release_long_format.csv'
 # getting a Forbidden error when trying to access via url
-data_path = parent_path / 'yearly_full_release_long_format.csv'
+data_csv = data_path / 'yearly_full_release_long_format.csv'
 try:
-    df_orig = pd.read_csv(data_path)
+    df_orig = pd.read_csv(data_csv)
 except FileNotFoundError:
     raise FileNotFoundError("Electricity data file must be downloaded and saved to "
                             "the electricity folder to proceed. \n"
@@ -123,11 +125,11 @@ from flcac_utils.generate_processes import build_location_dict
 from flcac_utils.util import extract_actors_from_process_meta, \
     extract_sources_from_process_meta, extract_dqsystems
 
-with open(parent_path / 'electricity_process_metadata.yaml') as f:
+with open(data_path / 'electricity_process_metadata.yaml') as f:
     process_meta = yaml.safe_load(f)
 
 (process_meta, source_objs) = extract_sources_from_process_meta(
-    process_meta, bib_path = parent_path / 'electricity.bib')
+    process_meta, bib_path = data_path / 'electricity.bib')
 (process_meta, actor_objs) = extract_actors_from_process_meta(process_meta)
 dq_objs = extract_dqsystems(meta['DQI']['dqSystem'])
 process_meta['dq_entry'] = format_dqi_score(meta['DQI']['Process'])
@@ -159,4 +161,4 @@ for year in df_olca.Year.unique():
 
 write_objects('international_electricity', flows, new_flows, processes,
               location_objs, source_objs, actor_objs, dq_objs,
-              )
+              out_path = out_path)
