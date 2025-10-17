@@ -6,7 +6,8 @@ import pandas as pd
 import numpy as np
 from pathlib import Path
 import yaml
-from esupy.util import make_uuid
+import sys
+# from esupy.util import make_uuid
 
 parent_path = Path(__file__).parent
 data_path = parent_path / 'data'
@@ -20,6 +21,7 @@ years = meta['Years']
 # https://ember-climate.org/data-catalogue/yearly-electricity-data/
 # data_url = 'https://ember-climate.org/app/uploads/2022/07/yearly_full_release_long_format.csv'
 # getting a Forbidden error when trying to access via url
+# alternate use API: https://api.ember-energy.org/docs
 data_csv = data_path / 'yearly_full_release_long_format.csv'
 try:
     df_orig = pd.read_csv(data_csv)
@@ -31,13 +33,13 @@ except FileNotFoundError:
 # Prepare dataframe of electricity shares
 df = (df_orig
       .query('Year.isin(@years)')
-      .query('`Area type` == "Country"')
+      .query('`Area type` == "Country or economy"')
       .query('Category == "Electricity generation"')
       .query('Subcategory == "Fuel"')
       .query('Unit == "TWh"')
-      .filter(['Year', 'Area', 'Country', 'Country code',
+      .filter(['Year', 'Area', 'Country', 'ISO 3 code',
                'Variable', 'Unit', 'Value'])
-      .rename(columns={'Country code': 'CountryCode',
+      .rename(columns={'ISO 3 code': 'CountryCode',
                        'Variable': 'Fuel'})
       )
 df['share'] = df['Value'] / df.groupby(['CountryCode', 'Year'])['Value'].transform('sum')
@@ -46,7 +48,12 @@ countries = (df[['Area', 'CountryCode', 'Year']]
              .sort_values(by='Year')
              .drop_duplicates(subset=['Area', 'CountryCode'], keep='last')
              )
-# countries.to_csv(parent_path / 'country_corr.csv', index=False)
+
+# Write to markdown
+## TODO: note a few countries get dropped, maybe missing location objects?
+markdown_file = countries.sort_values(by='Area').to_markdown(index=False)
+with open(parent_path / "country_list.md", "w") as f:
+    f.write("# Country List\n\n" + markdown_file)
 
 # merge back in to keep only the latest set of data for each area
 df = df.merge(countries, how='inner')
@@ -76,7 +83,7 @@ df_olca = (df_olca
            .rename(columns={'Fuel': 'description'})
            .assign(description = lambda x: x['description'].fillna(''))
            .drop(columns=['Unit', 'share', 'Value'])
-           .query('CountryCode != "USA"') # Drop US data?
+           .query('CountryCode != "USA"') # Drop US data
            .reset_index(drop=True)
            )
 # Update process name
@@ -95,6 +102,10 @@ df_olca['default_provider_name'] = df_olca['description'].map(
 df_olca['default_provider'] = df_olca['description'].map(
     {k: v['UUID'] for k, v in meta['Fuel'].items()})
 
+## Confirm that totals are divisible by 1 (aka no missing data in gen mix)
+if(df_olca['amount'].sum() % 1 != 0):
+    print("WARNING: Check gen mix - not summing to 1!!")
+    sys.exit()
 
 #%% Assign exchange dqi
 from flcac_utils.util import format_dqi_score, increment_dqi_value

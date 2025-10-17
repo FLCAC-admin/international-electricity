@@ -49,14 +49,14 @@ sampling_description: >
     No uncertainty was assessed.
 
 data_collection_description: >
-    Data from Ember Climate were accessed in August of 2024.
+    Data from Ember Climate were accessed on October 17 2025.
 
 use_advice: >
     This process is intended to connect to electriciy generation processes from
     the electricity baseline.
 
 sources:
- - ember_climate_yearly_2024: Ember Climate Yearly Electricity Data
+ - ember_climate_yearly_2025: Ember Climate Yearly Electricity Data
  - ember_climate_data_2022: Ember Climate Data Methodology
 
 ## Admin information
