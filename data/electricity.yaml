@@ -15,7 +15,7 @@ Process:
   # 'Electricity, AC, 120 V'
   # '3bca3bc6-2443-3184-8976-72dc98d258f6'
 
-## Ember fuel categories
+## Ember fuel categories linked to eLCI processes
 Fuel:
   Bioenergy:
     ProcessName: 'Electricity - BIOMASS - US'
@@ -123,10 +123,3 @@ DQI:
       description: >
         Assumes that country or international data sources are representative of
         full market. 
-
-Review:
-  review_type: 'Dependent internal review'
-  reviewers:
-    - USLCI: 'Franklin Associates, A Division of ERG'
-  details: >
-    details of review performed go here

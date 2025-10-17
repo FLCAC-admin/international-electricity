@@ -16,7 +16,8 @@ geography_description: >
     This process represents the generation mix of the entire region.
 
 technology_description: >
-    This is the tech description.
+    Generation technologies were mapped to those available in the U.S.
+    Electricity Baseline.
 
 ## DQI methods
 
@@ -28,9 +29,8 @@ inventory_method_description: >
 
 modeling_constants_description: >
     Approaches to compile and estimate generation mixes for specific countries
-    by Ember Climate are described in the linked methodology document.
-    Generation technologies were mapped to those available in the U.S.
-    Electricity Baseline.
+    by Ember Climate are described in the linked Ember Climate Data Methodology
+    source object.
 
 ## Data Source information
 
@@ -56,8 +56,8 @@ use_advice: >
     the electricity baseline.
 
 sources:
- - ember_climate_yearly_2024: Ember Climate 1
- - ember_climate_data_2022: Ember Climate 2
+ - ember_climate_yearly_2024: Ember Climate Yearly Electricity Data
+ - ember_climate_data_2022: Ember Climate Data Methodology
 
 ## Admin information
 
@@ -76,15 +76,23 @@ intended_application: >
 
 
 data_generator:
-    USLCI: 'Franklin Associates, A Division of ERG'
+    USLCI: 'ERG'
 
 data_documentor:
-    USLCI: 'Franklin Associates, A Division of ERG'
+    USLCI: 'ERG'
 
 publication: 
     flcac_international_electricity: 'ERG, International Electricity'
 
 # creation_date: # Turn off to assign automatically
+
+reviews:
+  1:
+    reviewType: 'Dependent internal review'
+    reviewers:
+      - USLCI: 'ERG'
+    details: >
+      details of review performed go here
 
 restrictions_description: >
     The underlying Ember Climate data is released under a Creative Commons Attribution Licence.
