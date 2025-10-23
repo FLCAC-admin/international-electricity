@@ -1,3 +1,4 @@
 output/*.zip
+output/*/locations/
 data/yearly_full_release*.csv
 *.env
