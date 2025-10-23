@@ -1,0 +1,18 @@
+﻿repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+    - id: check-json  # -toml, -yaml, -xml
+    - id: pretty-format-json
+      args: [--autofix]
+      # args: [">", "output.log"]
+    - id: end-of-file-fixer
+    - id: trailing-whitespace
+    # - id: requirements-txt-fixer
+
+  ## https://docs.astral.sh/ruff/
+  # - repo: https://github.com/astral-sh/ruff-pre-commit
+  #   rev: v0.11.2
+  #   hooks:
+  #     - id: ruff
+  #     - id: ruff-format
