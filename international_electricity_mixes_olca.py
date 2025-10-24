@@ -59,6 +59,26 @@ with open(parent_path / "country_list.md", "w") as f:
 df = df.merge(countries, how='inner')
 df = df.dropna(subset='share')
 
+## Round the values to N digits but make sure they still sum to 1
+def round_group(group, value_col, digits=4):
+    factor = 10 ** digits
+    shares = group[value_col].values
+    scaled = shares * factor
+    floored = np.floor(scaled)
+    remainder = int(factor - floored.sum())
+
+    # Distribute the remainder to the largest fractional parts
+    fractional_parts = scaled - floored
+    indices = np.argsort(-fractional_parts)[:remainder]
+    floored[indices] += 1
+
+    # Return the adjusted shares
+    group[value_col] = floored / factor
+    return group
+df = (df.groupby("CountryCode", group_keys=False)
+      [df.columns].apply(round_group, value_col='share'))
+
+
 #%% Link to fuel specific flows in eLCI and prepare dataframe for oLCA
 df_olca = pd.concat([(df
                       .assign(reference = False)
