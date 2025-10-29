@@ -17,7 +17,7 @@
   },
   "exchanges": [
     {
-      "amount": 0.07418397626112759,
+      "amount": 0.0742,
       "defaultProvider": {
         "@type": "Process",
         "@id": "c76033d9-1ac2-3975-b8f3-cbaef8892e75"
@@ -45,7 +45,7 @@
       }
     },
     {
-      "amount": 0.27596439169139464,
+      "amount": 0.276,
       "defaultProvider": {
         "@type": "Process",
         "@id": "1a4cda28-2d34-3c33-9f94-e2aa49b7fca5"
@@ -73,7 +73,7 @@
       }
     },
     {
-      "amount": 0.18694362017804153,
+      "amount": 0.1869,
       "defaultProvider": {
         "@type": "Process",
         "@id": "84976f72-00ef-34a0-aa4b-25e4d1b6d561"
@@ -101,7 +101,7 @@
       }
     },
     {
-      "amount": 0.3827893175074184,
+      "amount": 0.3828,
       "defaultProvider": {
         "@type": "Process",
         "@id": "675b255f-6eb1-3414-90a0-790c582cb622"
@@ -129,7 +129,7 @@
       }
     },
     {
-      "amount": 0.08011869436201781,
+      "amount": 0.0801,
       "defaultProvider": {
         "@type": "Process",
         "@id": "9d8ad430-506f-375c-8f9f-fd8c09de1760"
@@ -209,7 +209,7 @@
       }
     }
   ],
-  "lastChange": "2025-10-17T20:28:11.664522Z",
+  "lastChange": "2025-10-29T12:00:00Z",
   "location": {
     "@type": "Location",
     "@id": "12eccbdd-9b32-3181-b134-1f38907cbbb5",
@@ -218,7 +218,7 @@
   "name": "Electricity; at grid; generation mix - Reunion",
   "processDocumentation": {
     "completenessDescription": "This process contains no elementary flows. Generation mix of all technologies sums to 100%.\n",
-    "creationDate": "2025-10-17T16:28:11",
+    "creationDate": "2025-10-29T12:00:00",
     "dataCollectionDescription": "Data from Ember Climate were accessed on October 17 2025.\n",
     "dataDocumentor": {
       "@type": "Actor",

@@ -17,7 +17,7 @@
   },
   "exchanges": [
     {
-      "amount": 0.0014782959279666713,
+      "amount": 0.0015,
       "defaultProvider": {
         "@type": "Process",
         "@id": "c76033d9-1ac2-3975-b8f3-cbaef8892e75"
@@ -45,7 +45,7 @@
       }
     },
     {
-      "amount": 0.17645477758365813,
+      "amount": 0.1764,
       "defaultProvider": {
         "@type": "Process",
         "@id": "1a4cda28-2d34-3c33-9f94-e2aa49b7fca5"
@@ -73,7 +73,7 @@
       }
     },
     {
-      "amount": 0.7138825426689961,
+      "amount": 0.7139,
       "defaultProvider": {
         "@type": "Process",
         "@id": "af0efb53-bbfe-3b45-9ad7-ecc9d6ddfd74"
@@ -157,7 +157,7 @@
       }
     },
     {
-      "amount": 0.004569278322806075,
+      "amount": 0.0046,
       "defaultProvider": {
         "@type": "Process",
         "@id": "675b255f-6eb1-3414-90a0-790c582cb622"
@@ -213,7 +213,7 @@
       }
     },
     {
-      "amount": 0.09367020561752452,
+      "amount": 0.0937,
       "defaultProvider": {
         "@type": "Process",
         "@id": "9d8ad430-506f-375c-8f9f-fd8c09de1760"
@@ -241,7 +241,7 @@
       }
     },
     {
-      "amount": 0.009944899879048515,
+      "amount": 0.0099,
       "defaultProvider": {
         "@type": "Process",
         "@id": "ff34ff9f-78f1-350f-a289-fddaa0d3f6cb"
@@ -293,7 +293,7 @@
       }
     }
   ],
-  "lastChange": "2025-10-17T20:28:11.198883Z",
+  "lastChange": "2025-10-29T12:00:00Z",
   "location": {
     "@type": "Location",
     "@id": "4605f628-f91d-321e-8b5f-9433f46e29eb",
@@ -302,7 +302,7 @@
   "name": "Electricity; at grid; generation mix - Israel",
   "processDocumentation": {
     "completenessDescription": "This process contains no elementary flows. Generation mix of all technologies sums to 100%.\n",
-    "creationDate": "2025-10-17T16:28:11",
+    "creationDate": "2025-10-29T12:00:00",
     "dataCollectionDescription": "Data from Ember Climate were accessed on October 17 2025.\n",
     "dataDocumentor": {
       "@type": "Actor",

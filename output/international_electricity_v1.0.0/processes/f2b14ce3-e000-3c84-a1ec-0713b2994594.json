@@ -157,7 +157,7 @@
       }
     },
     {
-      "amount": 0.6666666666666667,
+      "amount": 0.6667,
       "defaultProvider": {
         "@type": "Process",
         "@id": "675b255f-6eb1-3414-90a0-790c582cb622"
@@ -213,7 +213,7 @@
       }
     },
     {
-      "amount": 0.33333333333333337,
+      "amount": 0.3333,
       "defaultProvider": {
         "@type": "Process",
         "@id": "9d8ad430-506f-375c-8f9f-fd8c09de1760"
@@ -293,7 +293,7 @@
       }
     }
   ],
-  "lastChange": "2025-10-17T20:28:11.664522Z",
+  "lastChange": "2025-10-29T12:00:00Z",
   "location": {
     "@type": "Location",
     "@id": "8812c36a-a5ae-336c-aa77-bf63211d899a",
@@ -302,7 +302,7 @@
   "name": "Electricity; at grid; generation mix - Palestine, State of",
   "processDocumentation": {
     "completenessDescription": "This process contains no elementary flows. Generation mix of all technologies sums to 100%.\n",
-    "creationDate": "2025-10-17T16:28:11",
+    "creationDate": "2025-10-29T12:00:00",
     "dataCollectionDescription": "Data from Ember Climate were accessed on October 17 2025.\n",
     "dataDocumentor": {
       "@type": "Actor",

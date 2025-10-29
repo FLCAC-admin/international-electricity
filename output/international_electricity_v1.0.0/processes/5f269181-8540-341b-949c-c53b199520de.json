@@ -293,7 +293,7 @@
       }
     }
   ],
-  "lastChange": "2025-10-17T20:28:11.501062Z",
+  "lastChange": "2025-10-29T12:00:00Z",
   "location": {
     "@type": "Location",
     "@id": "5c4fefda-27cf-384c-b999-be13e6b8608a",
@@ -302,7 +302,7 @@
   "name": "Electricity; at grid; generation mix - Turks and Caicos Islands (the)",
   "processDocumentation": {
     "completenessDescription": "This process contains no elementary flows. Generation mix of all technologies sums to 100%.\n",
-    "creationDate": "2025-10-17T16:28:11",
+    "creationDate": "2025-10-29T12:00:00",
     "dataCollectionDescription": "Data from Ember Climate were accessed on October 17 2025.\n",
     "dataDocumentor": {
       "@type": "Actor",

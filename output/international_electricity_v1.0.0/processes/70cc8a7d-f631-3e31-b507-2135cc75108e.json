@@ -293,7 +293,7 @@
       }
     }
   ],
-  "lastChange": "2025-10-17T20:28:11.575422Z",
+  "lastChange": "2025-10-29T12:00:00Z",
   "location": {
     "@type": "Location",
     "@id": "ef1cb6e7-2d14-3b18-8cc2-41037203f60b",
@@ -302,7 +302,7 @@
   "name": "Electricity; at grid; generation mix - Falkland Islands (the) [Malvinas]",
   "processDocumentation": {
     "completenessDescription": "This process contains no elementary flows. Generation mix of all technologies sums to 100%.\n",
-    "creationDate": "2025-10-17T16:28:11",
+    "creationDate": "2025-10-29T12:00:00",
     "dataCollectionDescription": "Data from Ember Climate were accessed on October 17 2025.\n",
     "dataDocumentor": {
       "@type": "Actor",

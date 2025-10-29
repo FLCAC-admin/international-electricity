@@ -17,7 +17,7 @@
   },
   "exchanges": [
     {
-      "amount": 0.05102040816326531,
+      "amount": 0.051,
       "defaultProvider": {
         "@type": "Process",
         "@id": "c76033d9-1ac2-3975-b8f3-cbaef8892e75"
@@ -45,7 +45,7 @@
       }
     },
     {
-      "amount": 0.6122448979591836,
+      "amount": 0.6123,
       "defaultProvider": {
         "@type": "Process",
         "@id": "84976f72-00ef-34a0-aa4b-25e4d1b6d561"
@@ -73,7 +73,7 @@
       }
     },
     {
-      "amount": 0.2857142857142857,
+      "amount": 0.2857,
       "defaultProvider": {
         "@type": "Process",
         "@id": "675b255f-6eb1-3414-90a0-790c582cb622"
@@ -101,7 +101,7 @@
       }
     },
     {
-      "amount": 0.05102040816326531,
+      "amount": 0.051,
       "defaultProvider": {
         "@type": "Process",
         "@id": "9d8ad430-506f-375c-8f9f-fd8c09de1760"
@@ -153,7 +153,7 @@
       }
     }
   ],
-  "lastChange": "2025-10-17T20:28:11.582469Z",
+  "lastChange": "2025-10-29T12:00:00Z",
   "location": {
     "@type": "Location",
     "@id": "e5bb2379-7bfe-3314-a3db-43d07dbd6a74",
@@ -162,7 +162,7 @@
   "name": "Electricity; at grid; generation mix - French Guiana",
   "processDocumentation": {
     "completenessDescription": "This process contains no elementary flows. Generation mix of all technologies sums to 100%.\n",
-    "creationDate": "2025-10-17T16:28:11",
+    "creationDate": "2025-10-29T12:00:00",
     "dataCollectionDescription": "Data from Ember Climate were accessed on October 17 2025.\n",
     "dataDocumentor": {
       "@type": "Actor",

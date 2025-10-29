@@ -17,7 +17,7 @@
   },
   "exchanges": [
     {
-      "amount": 0.028960223307745985,
+      "amount": 0.0278,
       "defaultProvider": {
         "@type": "Process",
         "@id": "c76033d9-1ac2-3975-b8f3-cbaef8892e75"
@@ -45,7 +45,7 @@
       }
     },
     {
-      "amount": 0.009944173063503139,
+      "amount": 0.0096,
       "defaultProvider": {
         "@type": "Process",
         "@id": "1a4cda28-2d34-3c33-9f94-e2aa49b7fca5"
@@ -73,7 +73,7 @@
       }
     },
     {
-      "amount": 0.9256803907885555,
+      "amount": 0.9215,
       "defaultProvider": {
         "@type": "Process",
         "@id": "af0efb53-bbfe-3b45-9ad7-ecc9d6ddfd74"
@@ -101,7 +101,7 @@
       }
     },
     {
-      "amount": 0.019016050244242848,
+      "amount": 0.0196,
       "defaultProvider": {
         "@type": "Process",
         "@id": "675b255f-6eb1-3414-90a0-790c582cb622"
@@ -129,7 +129,7 @@
       }
     },
     {
-      "amount": 0.016399162595952546,
+      "amount": 0.0215,
       "defaultProvider": {
         "@type": "Process",
         "@id": "9d8ad430-506f-375c-8f9f-fd8c09de1760"
@@ -181,7 +181,7 @@
       }
     }
   ],
-  "lastChange": "2025-10-17T20:28:11.405235Z",
+  "lastChange": "2025-10-29T12:00:00Z",
   "location": {
     "@type": "Location",
     "@id": "5dae4296-88af-3c52-9ad8-7ac394192c6d",
@@ -190,7 +190,7 @@
   "name": "Electricity; at grid; generation mix - Singapore",
   "processDocumentation": {
     "completenessDescription": "This process contains no elementary flows. Generation mix of all technologies sums to 100%.\n",
-    "creationDate": "2025-10-17T16:28:11",
+    "creationDate": "2025-10-29T12:00:00",
     "dataCollectionDescription": "Data from Ember Climate were accessed on October 17 2025.\n",
     "dataDocumentor": {
       "@type": "Actor",
@@ -239,8 +239,8 @@
     "technologyDescription": "Generation technologies were mapped to those available in the U.S. Electricity Baseline.\n",
     "timeDescription": "This process reflects the generation mix of the region over the course of the entire year. It reflects the most recently available full year.\n",
     "useAdvice": "This process is intended to connect to electriciy generation processes from the electricity baseline.\n",
-    "validFrom": "2023-01-01T00:00:00",
-    "validUntil": "2023-12-31T00:00:00"
+    "validFrom": "2024-01-01T00:00:00",
+    "validUntil": "2024-12-31T00:00:00"
   },
   "processType": "UNIT_PROCESS",
   "version": "01.00.000"

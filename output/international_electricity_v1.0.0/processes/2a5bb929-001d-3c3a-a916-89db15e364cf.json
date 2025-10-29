@@ -17,7 +17,7 @@
   },
   "exchanges": [
     {
-      "amount": 0.006567164179104477,
+      "amount": 0.0066,
       "defaultProvider": {
         "@type": "Process",
         "@id": "c76033d9-1ac2-3975-b8f3-cbaef8892e75"
@@ -101,7 +101,7 @@
       }
     },
     {
-      "amount": 0.6865671641791045,
+      "amount": 0.6866,
       "defaultProvider": {
         "@type": "Process",
         "@id": "84976f72-00ef-34a0-aa4b-25e4d1b6d561"
@@ -157,7 +157,7 @@
       }
     },
     {
-      "amount": 0.29850746268656714,
+      "amount": 0.2985,
       "defaultProvider": {
         "@type": "Process",
         "@id": "675b255f-6eb1-3414-90a0-790c582cb622"
@@ -213,7 +213,7 @@
       }
     },
     {
-      "amount": 0.008358208955223882,
+      "amount": 0.0083,
       "defaultProvider": {
         "@type": "Process",
         "@id": "9d8ad430-506f-375c-8f9f-fd8c09de1760"
@@ -293,7 +293,7 @@
       }
     }
   ],
-  "lastChange": "2025-10-17T20:28:11.439265Z",
+  "lastChange": "2025-10-29T12:00:00Z",
   "location": {
     "@type": "Location",
     "@id": "6226f7cb-e59e-39a9-8b5c-ef6f94f966fd",
@@ -302,7 +302,7 @@
   "name": "Electricity; at grid; generation mix - Sudan (the)",
   "processDocumentation": {
     "completenessDescription": "This process contains no elementary flows. Generation mix of all technologies sums to 100%.\n",
-    "creationDate": "2025-10-17T16:28:11",
+    "creationDate": "2025-10-29T12:00:00",
     "dataCollectionDescription": "Data from Ember Climate were accessed on October 17 2025.\n",
     "dataDocumentor": {
       "@type": "Actor",

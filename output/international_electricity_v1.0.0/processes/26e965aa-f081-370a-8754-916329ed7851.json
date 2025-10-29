@@ -17,7 +17,7 @@
   },
   "exchanges": [
     {
-      "amount": 0.09785932721712537,
+      "amount": 0.0979,
       "defaultProvider": {
         "@type": "Process",
         "@id": "c76033d9-1ac2-3975-b8f3-cbaef8892e75"
@@ -45,7 +45,7 @@
       }
     },
     {
-      "amount": 0.3363914373088685,
+      "amount": 0.3364,
       "defaultProvider": {
         "@type": "Process",
         "@id": "1a4cda28-2d34-3c33-9f94-e2aa49b7fca5"
@@ -101,7 +101,7 @@
       }
     },
     {
-      "amount": 0.02752293577981651,
+      "amount": 0.0275,
       "defaultProvider": {
         "@type": "Process",
         "@id": "84976f72-00ef-34a0-aa4b-25e4d1b6d561"
@@ -157,7 +157,7 @@
       }
     },
     {
-      "amount": 0.48929663608562685,
+      "amount": 0.4893,
       "defaultProvider": {
         "@type": "Process",
         "@id": "675b255f-6eb1-3414-90a0-790c582cb622"
@@ -213,7 +213,7 @@
       }
     },
     {
-      "amount": 0.04587155963302751,
+      "amount": 0.0459,
       "defaultProvider": {
         "@type": "Process",
         "@id": "9d8ad430-506f-375c-8f9f-fd8c09de1760"
@@ -241,7 +241,7 @@
       }
     },
     {
-      "amount": 0.003058103975535168,
+      "amount": 0.003,
       "defaultProvider": {
         "@type": "Process",
         "@id": "ff34ff9f-78f1-350f-a289-fddaa0d3f6cb"
@@ -293,7 +293,7 @@
       }
     }
   ],
-  "lastChange": "2025-10-17T20:28:11.265493Z",
+  "lastChange": "2025-10-29T12:00:00Z",
   "location": {
     "@type": "Location",
     "@id": "89aa4b19-6b48-38a1-ba65-49bb1eaebd80",
@@ -302,7 +302,7 @@
   "name": "Electricity; at grid; generation mix - Mauritius",
   "processDocumentation": {
     "completenessDescription": "This process contains no elementary flows. Generation mix of all technologies sums to 100%.\n",
-    "creationDate": "2025-10-17T16:28:11",
+    "creationDate": "2025-10-29T12:00:00",
     "dataCollectionDescription": "Data from Ember Climate were accessed on October 17 2025.\n",
     "dataDocumentor": {
       "@type": "Actor",

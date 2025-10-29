@@ -17,7 +17,7 @@
   },
   "exchanges": [
     {
-      "amount": 0.40816326530612246,
+      "amount": 0.4082,
       "defaultProvider": {
         "@type": "Process",
         "@id": "c76033d9-1ac2-3975-b8f3-cbaef8892e75"
@@ -73,7 +73,7 @@
       }
     },
     {
-      "amount": 0.5102040816326531,
+      "amount": 0.5102,
       "defaultProvider": {
         "@type": "Process",
         "@id": "af0efb53-bbfe-3b45-9ad7-ecc9d6ddfd74"
@@ -157,7 +157,7 @@
       }
     },
     {
-      "amount": 0.0816326530612245,
+      "amount": 0.0816,
       "defaultProvider": {
         "@type": "Process",
         "@id": "675b255f-6eb1-3414-90a0-790c582cb622"
@@ -293,7 +293,7 @@
       }
     }
   ],
-  "lastChange": "2025-10-17T20:28:11.632338Z",
+  "lastChange": "2025-10-29T12:00:00Z",
   "location": {
     "@type": "Location",
     "@id": "27c9d518-7cd2-33f8-9160-ec1ed2b5ac89",
@@ -302,7 +302,7 @@
   "name": "Electricity; at grid; generation mix - Macao",
   "processDocumentation": {
     "completenessDescription": "This process contains no elementary flows. Generation mix of all technologies sums to 100%.\n",
-    "creationDate": "2025-10-17T16:28:11",
+    "creationDate": "2025-10-29T12:00:00",
     "dataCollectionDescription": "Data from Ember Climate were accessed on October 17 2025.\n",
     "dataDocumentor": {
       "@type": "Actor",

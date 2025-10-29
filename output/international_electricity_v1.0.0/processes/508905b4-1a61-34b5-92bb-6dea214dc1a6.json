@@ -157,7 +157,7 @@
       }
     },
     {
-      "amount": 0.8095238095238095,
+      "amount": 0.8095,
       "defaultProvider": {
         "@type": "Process",
         "@id": "675b255f-6eb1-3414-90a0-790c582cb622"
@@ -213,7 +213,7 @@
       }
     },
     {
-      "amount": 0.16666666666666666,
+      "amount": 0.1667,
       "defaultProvider": {
         "@type": "Process",
         "@id": "9d8ad430-506f-375c-8f9f-fd8c09de1760"
@@ -241,7 +241,7 @@
       }
     },
     {
-      "amount": 0.023809523809523808,
+      "amount": 0.0238,
       "defaultProvider": {
         "@type": "Process",
         "@id": "ff34ff9f-78f1-350f-a289-fddaa0d3f6cb"
@@ -293,7 +293,7 @@
       }
     }
   ],
-  "lastChange": "2025-10-17T20:28:11.419201Z",
+  "lastChange": "2025-10-29T12:00:00Z",
   "location": {
     "@type": "Location",
     "@id": "b807023f-87e6-3b8a-9a92-f79f546ff9cc",
@@ -302,7 +302,7 @@
   "name": "Electricity; at grid; generation mix - Somalia",
   "processDocumentation": {
     "completenessDescription": "This process contains no elementary flows. Generation mix of all technologies sums to 100%.\n",
-    "creationDate": "2025-10-17T16:28:11",
+    "creationDate": "2025-10-29T12:00:00",
     "dataCollectionDescription": "Data from Ember Climate were accessed on October 17 2025.\n",
     "dataDocumentor": {
       "@type": "Actor",

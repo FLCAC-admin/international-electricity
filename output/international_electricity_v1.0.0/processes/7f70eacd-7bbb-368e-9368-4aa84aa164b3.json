@@ -73,7 +73,7 @@
       }
     },
     {
-      "amount": 0.14625030142271522,
+      "amount": 0.1463,
       "defaultProvider": {
         "@type": "Process",
         "@id": "af0efb53-bbfe-3b45-9ad7-ecc9d6ddfd74"
@@ -101,7 +101,7 @@
       }
     },
     {
-      "amount": 0.783457921388956,
+      "amount": 0.7835,
       "defaultProvider": {
         "@type": "Process",
         "@id": "84976f72-00ef-34a0-aa4b-25e4d1b6d561"
@@ -157,7 +157,7 @@
       }
     },
     {
-      "amount": 0.06993006993006994,
+      "amount": 0.0699,
       "defaultProvider": {
         "@type": "Process",
         "@id": "675b255f-6eb1-3414-90a0-790c582cb622"
@@ -213,7 +213,7 @@
       }
     },
     {
-      "amount": 0.00012056908608632747,
+      "amount": 0.0001,
       "defaultProvider": {
         "@type": "Process",
         "@id": "9d8ad430-506f-375c-8f9f-fd8c09de1760"
@@ -241,7 +241,7 @@
       }
     },
     {
-      "amount": 0.00024113817217265494,
+      "amount": 0.0002,
       "defaultProvider": {
         "@type": "Process",
         "@id": "ff34ff9f-78f1-350f-a289-fddaa0d3f6cb"
@@ -293,7 +293,7 @@
       }
     }
   ],
-  "lastChange": "2025-10-17T20:28:11.522687Z",
+  "lastChange": "2025-10-29T12:00:00Z",
   "location": {
     "@type": "Location",
     "@id": "eabb18f0-a40c-3b35-9237-0c9e1bc1d61e",
@@ -302,7 +302,7 @@
   "name": "Electricity; at grid; generation mix - Venezuela (Bolivarian Republic of)",
   "processDocumentation": {
     "completenessDescription": "This process contains no elementary flows. Generation mix of all technologies sums to 100%.\n",
-    "creationDate": "2025-10-17T16:28:11",
+    "creationDate": "2025-10-29T12:00:00",
     "dataCollectionDescription": "Data from Ember Climate were accessed on October 17 2025.\n",
     "dataDocumentor": {
       "@type": "Actor",

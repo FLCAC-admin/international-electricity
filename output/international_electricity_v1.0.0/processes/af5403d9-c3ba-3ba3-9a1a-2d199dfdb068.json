@@ -45,7 +45,7 @@
       }
     },
     {
-      "amount": 0.34764595103578155,
+      "amount": 0.3476,
       "defaultProvider": {
         "@type": "Process",
         "@id": "1a4cda28-2d34-3c33-9f94-e2aa49b7fca5"
@@ -101,7 +101,7 @@
       }
     },
     {
-      "amount": 0.6252354048964219,
+      "amount": 0.6252,
       "defaultProvider": {
         "@type": "Process",
         "@id": "84976f72-00ef-34a0-aa4b-25e4d1b6d561"
@@ -157,7 +157,7 @@
       }
     },
     {
-      "amount": 0.021468926553672316,
+      "amount": 0.0215,
       "defaultProvider": {
         "@type": "Process",
         "@id": "675b255f-6eb1-3414-90a0-790c582cb622"
@@ -213,7 +213,7 @@
       }
     },
     {
-      "amount": 0.005649717514124294,
+      "amount": 0.0057,
       "defaultProvider": {
         "@type": "Process",
         "@id": "9d8ad430-506f-375c-8f9f-fd8c09de1760"
@@ -293,7 +293,7 @@
       }
     }
   ],
-  "lastChange": "2025-10-17T20:28:11.626287Z",
+  "lastChange": "2025-10-29T12:00:00Z",
   "location": {
     "@type": "Location",
     "@id": "26b568e4-192a-364d-9b3e-acdbd632bc2e",
@@ -302,7 +302,7 @@
   "name": "Electricity; at grid; generation mix - Korea (the Democratic People's Republic of)",
   "processDocumentation": {
     "completenessDescription": "This process contains no elementary flows. Generation mix of all technologies sums to 100%.\n",
-    "creationDate": "2025-10-17T16:28:11",
+    "creationDate": "2025-10-29T12:00:00",
     "dataCollectionDescription": "Data from Ember Climate were accessed on October 17 2025.\n",
     "dataDocumentor": {
       "@type": "Actor",

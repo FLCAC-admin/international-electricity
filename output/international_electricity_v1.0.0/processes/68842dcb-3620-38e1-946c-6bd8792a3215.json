@@ -17,7 +17,7 @@
   },
   "exchanges": [
     {
-      "amount": 0.0018867924528301887,
+      "amount": 0.0019,
       "defaultProvider": {
         "@type": "Process",
         "@id": "c76033d9-1ac2-3975-b8f3-cbaef8892e75"
@@ -101,7 +101,7 @@
       }
     },
     {
-      "amount": 0.859748427672956,
+      "amount": 0.8597,
       "defaultProvider": {
         "@type": "Process",
         "@id": "84976f72-00ef-34a0-aa4b-25e4d1b6d561"
@@ -213,7 +213,7 @@
       }
     },
     {
-      "amount": 0.13836477987421386,
+      "amount": 0.1384,
       "defaultProvider": {
         "@type": "Process",
         "@id": "9d8ad430-506f-375c-8f9f-fd8c09de1760"
@@ -293,7 +293,7 @@
       }
     }
   ],
-  "lastChange": "2025-10-17T20:28:10.486004Z",
+  "lastChange": "2025-10-29T12:00:00Z",
   "location": {
     "@type": "Location",
     "@id": "6865aeb3-a9ed-38f9-a79e-c454b259e5d0",
@@ -302,7 +302,7 @@
   "name": "Electricity; at grid; generation mix - Congo (the Democratic Republic of the)",
   "processDocumentation": {
     "completenessDescription": "This process contains no elementary flows. Generation mix of all technologies sums to 100%.\n",
-    "creationDate": "2025-10-17T16:28:10",
+    "creationDate": "2025-10-29T12:00:00",
     "dataCollectionDescription": "Data from Ember Climate were accessed on October 17 2025.\n",
     "dataDocumentor": {
       "@type": "Actor",

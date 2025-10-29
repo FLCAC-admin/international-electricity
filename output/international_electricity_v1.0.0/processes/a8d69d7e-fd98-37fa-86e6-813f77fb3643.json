@@ -17,7 +17,7 @@
   },
   "exchanges": [
     {
-      "amount": 0.14634146341463414,
+      "amount": 0.1463,
       "defaultProvider": {
         "@type": "Process",
         "@id": "c76033d9-1ac2-3975-b8f3-cbaef8892e75"
@@ -45,7 +45,7 @@
       }
     },
     {
-      "amount": 0.13414634146341464,
+      "amount": 0.1341,
       "defaultProvider": {
         "@type": "Process",
         "@id": "1a4cda28-2d34-3c33-9f94-e2aa49b7fca5"
@@ -73,7 +73,7 @@
       }
     },
     {
-      "amount": 0.006097560975609756,
+      "amount": 0.0061,
       "defaultProvider": {
         "@type": "Process",
         "@id": "84976f72-00ef-34a0-aa4b-25e4d1b6d561"
@@ -101,7 +101,7 @@
       }
     },
     {
-      "amount": 0.5182926829268293,
+      "amount": 0.5183,
       "defaultProvider": {
         "@type": "Process",
         "@id": "675b255f-6eb1-3414-90a0-790c582cb622"
@@ -129,7 +129,7 @@
       }
     },
     {
-      "amount": 0.06097560975609757,
+      "amount": 0.061,
       "defaultProvider": {
         "@type": "Process",
         "@id": "27637316-f001-3de6-808c-1955d718adcd"
@@ -157,7 +157,7 @@
       }
     },
     {
-      "amount": 0.06707317073170732,
+      "amount": 0.0671,
       "defaultProvider": {
         "@type": "Process",
         "@id": "9d8ad430-506f-375c-8f9f-fd8c09de1760"
@@ -185,7 +185,7 @@
       }
     },
     {
-      "amount": 0.06707317073170732,
+      "amount": 0.0671,
       "defaultProvider": {
         "@type": "Process",
         "@id": "ff34ff9f-78f1-350f-a289-fddaa0d3f6cb"
@@ -237,7 +237,7 @@
       }
     }
   ],
-  "lastChange": "2025-10-17T20:28:11.599277Z",
+  "lastChange": "2025-10-29T12:00:00Z",
   "location": {
     "@type": "Location",
     "@id": "5343b21a-d303-3f17-9962-9894deca13db",
@@ -246,7 +246,7 @@
   "name": "Electricity; at grid; generation mix - Guadeloupe",
   "processDocumentation": {
     "completenessDescription": "This process contains no elementary flows. Generation mix of all technologies sums to 100%.\n",
-    "creationDate": "2025-10-17T16:28:11",
+    "creationDate": "2025-10-29T12:00:00",
     "dataCollectionDescription": "Data from Ember Climate were accessed on October 17 2025.\n",
     "dataDocumentor": {
       "@type": "Actor",

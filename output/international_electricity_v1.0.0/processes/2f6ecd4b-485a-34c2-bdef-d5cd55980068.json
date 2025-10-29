@@ -17,7 +17,7 @@
   },
   "exchanges": [
     {
-      "amount": 0.000547645125958379,
+      "amount": 0.0005,
       "defaultProvider": {
         "@type": "Process",
         "@id": "c76033d9-1ac2-3975-b8f3-cbaef8892e75"
@@ -101,7 +101,7 @@
       }
     },
     {
-      "amount": 0.9649507119386637,
+      "amount": 0.965,
       "defaultProvider": {
         "@type": "Process",
         "@id": "84976f72-00ef-34a0-aa4b-25e4d1b6d561"
@@ -185,7 +185,7 @@
       }
     },
     {
-      "amount": 0.0016429353778751367,
+      "amount": 0.0016,
       "defaultProvider": {
         "@type": "Process",
         "@id": "27637316-f001-3de6-808c-1955d718adcd"
@@ -213,7 +213,7 @@
       }
     },
     {
-      "amount": 0.002190580503833516,
+      "amount": 0.0022,
       "defaultProvider": {
         "@type": "Process",
         "@id": "9d8ad430-506f-375c-8f9f-fd8c09de1760"
@@ -241,7 +241,7 @@
       }
     },
     {
-      "amount": 0.03066812705366922,
+      "amount": 0.0307,
       "defaultProvider": {
         "@type": "Process",
         "@id": "ff34ff9f-78f1-350f-a289-fddaa0d3f6cb"
@@ -293,7 +293,7 @@
       }
     }
   ],
-  "lastChange": "2025-10-17T20:28:10.543108Z",
+  "lastChange": "2025-10-29T12:00:00Z",
   "location": {
     "@type": "Location",
     "@id": "4de1b7a4-dc53-34a8-8c25-ffb7cdb580ee",
@@ -302,7 +302,7 @@
   "name": "Electricity; at grid; generation mix - Ethiopia",
   "processDocumentation": {
     "completenessDescription": "This process contains no elementary flows. Generation mix of all technologies sums to 100%.\n",
-    "creationDate": "2025-10-17T16:28:10",
+    "creationDate": "2025-10-29T12:00:00",
     "dataCollectionDescription": "Data from Ember Climate were accessed on October 17 2025.\n",
     "dataDocumentor": {
       "@type": "Actor",

@@ -17,7 +17,7 @@
   },
   "exchanges": [
     {
-      "amount": 0.006375227686703097,
+      "amount": 0.0064,
       "defaultProvider": {
         "@type": "Process",
         "@id": "c76033d9-1ac2-3975-b8f3-cbaef8892e75"
@@ -73,7 +73,7 @@
       }
     },
     {
-      "amount": 0.7395264116575591,
+      "amount": 0.7395,
       "defaultProvider": {
         "@type": "Process",
         "@id": "af0efb53-bbfe-3b45-9ad7-ecc9d6ddfd74"
@@ -101,7 +101,7 @@
       }
     },
     {
-      "amount": 0.2459016393442623,
+      "amount": 0.2459,
       "defaultProvider": {
         "@type": "Process",
         "@id": "84976f72-00ef-34a0-aa4b-25e4d1b6d561"
@@ -157,7 +157,7 @@
       }
     },
     {
-      "amount": 0.00546448087431694,
+      "amount": 0.0055,
       "defaultProvider": {
         "@type": "Process",
         "@id": "675b255f-6eb1-3414-90a0-790c582cb622"
@@ -213,7 +213,7 @@
       }
     },
     {
-      "amount": 0.00273224043715847,
+      "amount": 0.0027,
       "defaultProvider": {
         "@type": "Process",
         "@id": "9d8ad430-506f-375c-8f9f-fd8c09de1760"
@@ -293,7 +293,7 @@
       }
     }
   ],
-  "lastChange": "2025-10-17T20:28:11.468482Z",
+  "lastChange": "2025-10-29T12:00:00Z",
   "location": {
     "@type": "Location",
     "@id": "73bb4387-b307-3739-aacb-9cd62ac4049c",
@@ -302,7 +302,7 @@
   "name": "Electricity; at grid; generation mix - Tanzania, the United Republic of",
   "processDocumentation": {
     "completenessDescription": "This process contains no elementary flows. Generation mix of all technologies sums to 100%.\n",
-    "creationDate": "2025-10-17T16:28:11",
+    "creationDate": "2025-10-29T12:00:00",
     "dataCollectionDescription": "Data from Ember Climate were accessed on October 17 2025.\n",
     "dataDocumentor": {
       "@type": "Actor",

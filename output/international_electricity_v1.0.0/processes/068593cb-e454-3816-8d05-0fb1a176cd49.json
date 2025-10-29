@@ -73,7 +73,7 @@
       }
     },
     {
-      "amount": 0.9331259720062208,
+      "amount": 0.9306,
       "defaultProvider": {
         "@type": "Process",
         "@id": "af0efb53-bbfe-3b45-9ad7-ecc9d6ddfd74"
@@ -157,7 +157,7 @@
       }
     },
     {
-      "amount": 0.026438569206842923,
+      "amount": 0.0274,
       "defaultProvider": {
         "@type": "Process",
         "@id": "675b255f-6eb1-3414-90a0-790c582cb622"
@@ -213,7 +213,7 @@
       }
     },
     {
-      "amount": 0.03776938458120418,
+      "amount": 0.0392,
       "defaultProvider": {
         "@type": "Process",
         "@id": "9d8ad430-506f-375c-8f9f-fd8c09de1760"
@@ -241,7 +241,7 @@
       }
     },
     {
-      "amount": 0.0026660742057320595,
+      "amount": 0.0028,
       "defaultProvider": {
         "@type": "Process",
         "@id": "ff34ff9f-78f1-350f-a289-fddaa0d3f6cb"
@@ -293,7 +293,7 @@
       }
     }
   ],
-  "lastChange": "2025-10-17T20:28:11.325744Z",
+  "lastChange": "2025-10-29T12:00:00Z",
   "location": {
     "@type": "Location",
     "@id": "d58da822-8993-3d8c-8ec4-f40689c2847e",
@@ -302,7 +302,7 @@
   "name": "Electricity; at grid; generation mix - Oman",
   "processDocumentation": {
     "completenessDescription": "This process contains no elementary flows. Generation mix of all technologies sums to 100%.\n",
-    "creationDate": "2025-10-17T16:28:11",
+    "creationDate": "2025-10-29T12:00:00",
     "dataCollectionDescription": "Data from Ember Climate were accessed on October 17 2025.\n",
     "dataDocumentor": {
       "@type": "Actor",
@@ -351,8 +351,8 @@
     "technologyDescription": "Generation technologies were mapped to those available in the U.S. Electricity Baseline.\n",
     "timeDescription": "This process reflects the generation mix of the region over the course of the entire year. It reflects the most recently available full year.\n",
     "useAdvice": "This process is intended to connect to electriciy generation processes from the electricity baseline.\n",
-    "validFrom": "2023-01-01T00:00:00",
-    "validUntil": "2023-12-31T00:00:00"
+    "validFrom": "2024-01-01T00:00:00",
+    "validUntil": "2024-12-31T00:00:00"
   },
   "processType": "UNIT_PROCESS",
   "version": "01.00.000"

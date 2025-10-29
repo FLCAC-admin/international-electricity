@@ -17,7 +17,7 @@
   },
   "exchanges": [
     {
-      "amount": 0.02564102564102564,
+      "amount": 0.0257,
       "defaultProvider": {
         "@type": "Process",
         "@id": "c76033d9-1ac2-3975-b8f3-cbaef8892e75"
@@ -157,7 +157,7 @@
       }
     },
     {
-      "amount": 0.9487179487179487,
+      "amount": 0.9487,
       "defaultProvider": {
         "@type": "Process",
         "@id": "675b255f-6eb1-3414-90a0-790c582cb622"
@@ -241,7 +241,7 @@
       }
     },
     {
-      "amount": 0.02564102564102564,
+      "amount": 0.0256,
       "defaultProvider": {
         "@type": "Process",
         "@id": "ff34ff9f-78f1-350f-a289-fddaa0d3f6cb"
@@ -293,7 +293,7 @@
       }
     }
   ],
-  "lastChange": "2025-10-17T20:28:11.566885Z",
+  "lastChange": "2025-10-29T12:00:00Z",
   "location": {
     "@type": "Location",
     "@id": "626726e6-0bd1-315f-b671-9a308a25b798",
@@ -302,7 +302,7 @@
   "name": "Electricity; at grid; generation mix - Chad",
   "processDocumentation": {
     "completenessDescription": "This process contains no elementary flows. Generation mix of all technologies sums to 100%.\n",
-    "creationDate": "2025-10-17T16:28:11",
+    "creationDate": "2025-10-29T12:00:00",
     "dataCollectionDescription": "Data from Ember Climate were accessed on October 17 2025.\n",
     "dataDocumentor": {
       "@type": "Actor",

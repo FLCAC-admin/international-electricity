@@ -45,7 +45,7 @@
       }
     },
     {
-      "amount": 0.015873015873015872,
+      "amount": 0.0159,
       "defaultProvider": {
         "@type": "Process",
         "@id": "1a4cda28-2d34-3c33-9f94-e2aa49b7fca5"
@@ -101,7 +101,7 @@
       }
     },
     {
-      "amount": 0.6984126984126984,
+      "amount": 0.6984,
       "defaultProvider": {
         "@type": "Process",
         "@id": "84976f72-00ef-34a0-aa4b-25e4d1b6d561"
@@ -157,7 +157,7 @@
       }
     },
     {
-      "amount": 0.005291005291005291,
+      "amount": 0.0053,
       "defaultProvider": {
         "@type": "Process",
         "@id": "675b255f-6eb1-3414-90a0-790c582cb622"
@@ -213,7 +213,7 @@
       }
     },
     {
-      "amount": 0.2698412698412698,
+      "amount": 0.2698,
       "defaultProvider": {
         "@type": "Process",
         "@id": "9d8ad430-506f-375c-8f9f-fd8c09de1760"
@@ -241,7 +241,7 @@
       }
     },
     {
-      "amount": 0.010582010582010581,
+      "amount": 0.0106,
       "defaultProvider": {
         "@type": "Process",
         "@id": "ff34ff9f-78f1-350f-a289-fddaa0d3f6cb"
@@ -293,11 +293,11 @@
       }
     }
   ],
-  "lastChange": "2025-10-17T20:28:11.297904Z",
+  "lastChange": "2025-10-29T12:00:00Z",
   "name": "Electricity; at grid; generation mix - Namibia",
   "processDocumentation": {
     "completenessDescription": "This process contains no elementary flows. Generation mix of all technologies sums to 100%.\n",
-    "creationDate": "2025-10-17T16:28:11",
+    "creationDate": "2025-10-29T12:00:00",
     "dataCollectionDescription": "Data from Ember Climate were accessed on October 17 2025.\n",
     "dataDocumentor": {
       "@type": "Actor",

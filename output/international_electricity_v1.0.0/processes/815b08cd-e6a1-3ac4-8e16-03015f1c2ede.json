@@ -17,7 +17,7 @@
   },
   "exchanges": [
     {
-      "amount": 0.02567309797054317,
+      "amount": 0.0254,
       "defaultProvider": {
         "@type": "Process",
         "@id": "c76033d9-1ac2-3975-b8f3-cbaef8892e75"
@@ -45,7 +45,7 @@
       }
     },
     {
-      "amount": 0.3690859626629976,
+      "amount": 0.3555,
       "defaultProvider": {
         "@type": "Process",
         "@id": "1a4cda28-2d34-3c33-9f94-e2aa49b7fca5"
@@ -73,7 +73,7 @@
       }
     },
     {
-      "amount": 0.20788642546671252,
+      "amount": 0.1855,
       "defaultProvider": {
         "@type": "Process",
         "@id": "af0efb53-bbfe-3b45-9ad7-ecc9d6ddfd74"
@@ -101,7 +101,7 @@
       }
     },
     {
-      "amount": 0.19925576159354574,
+      "amount": 0.2185,
       "defaultProvider": {
         "@type": "Process",
         "@id": "84976f72-00ef-34a0-aa4b-25e4d1b6d561"
@@ -157,7 +157,7 @@
       }
     },
     {
-      "amount": 0.0029394290002814345,
+      "amount": 0.0029,
       "defaultProvider": {
         "@type": "Process",
         "@id": "675b255f-6eb1-3414-90a0-790c582cb622"
@@ -185,7 +185,7 @@
       }
     },
     {
-      "amount": 0.0316770380562244,
+      "amount": 0.0299,
       "defaultProvider": {
         "@type": "Process",
         "@id": "27637316-f001-3de6-808c-1955d718adcd"
@@ -213,7 +213,7 @@
       }
     },
     {
-      "amount": 0.057537759154445096,
+      "amount": 0.0752,
       "defaultProvider": {
         "@type": "Process",
         "@id": "9d8ad430-506f-375c-8f9f-fd8c09de1760"
@@ -241,7 +241,7 @@
       }
     },
     {
-      "amount": 0.10594452609525001,
+      "amount": 0.1071,
       "defaultProvider": {
         "@type": "Process",
         "@id": "ff34ff9f-78f1-350f-a289-fddaa0d3f6cb"
@@ -293,7 +293,7 @@
       }
     }
   ],
-  "lastChange": "2025-10-17T20:28:11.493043Z",
+  "lastChange": "2025-10-29T12:00:00Z",
   "location": {
     "@type": "Location",
     "@id": "e7d707a2-6e7f-3b6f-b52c-489c60e429b1",
@@ -302,7 +302,7 @@
   "name": "Electricity; at grid; generation mix - Turkey",
   "processDocumentation": {
     "completenessDescription": "This process contains no elementary flows. Generation mix of all technologies sums to 100%.\n",
-    "creationDate": "2025-10-17T16:28:11",
+    "creationDate": "2025-10-29T12:00:00",
     "dataCollectionDescription": "Data from Ember Climate were accessed on October 17 2025.\n",
     "dataDocumentor": {
       "@type": "Actor",
@@ -351,8 +351,8 @@
     "technologyDescription": "Generation technologies were mapped to those available in the U.S. Electricity Baseline.\n",
     "timeDescription": "This process reflects the generation mix of the region over the course of the entire year. It reflects the most recently available full year.\n",
     "useAdvice": "This process is intended to connect to electriciy generation processes from the electricity baseline.\n",
-    "validFrom": "2023-01-01T00:00:00",
-    "validUntil": "2023-12-31T00:00:00"
+    "validFrom": "2024-01-01T00:00:00",
+    "validUntil": "2024-12-31T00:00:00"
   },
   "processType": "UNIT_PROCESS",
   "version": "01.00.000"

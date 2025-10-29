@@ -17,7 +17,7 @@
   },
   "exchanges": [
     {
-      "amount": 0.08156809580297124,
+      "amount": 0.0781,
       "defaultProvider": {
         "@type": "Process",
         "@id": "c76033d9-1ac2-3975-b8f3-cbaef8892e75"
@@ -45,7 +45,7 @@
       }
     },
     {
-      "amount": 0.018796249223295487,
+      "amount": 0.0217,
       "defaultProvider": {
         "@type": "Process",
         "@id": "1a4cda28-2d34-3c33-9f94-e2aa49b7fca5"
@@ -73,7 +73,7 @@
       }
     },
     {
-      "amount": 0.05449641303733831,
+      "amount": 0.0654,
       "defaultProvider": {
         "@type": "Process",
         "@id": "af0efb53-bbfe-3b45-9ad7-ecc9d6ddfd74"
@@ -101,7 +101,7 @@
       }
     },
     {
-      "amount": 0.6015929503473988,
+      "amount": 0.5541,
       "defaultProvider": {
         "@type": "Process",
         "@id": "84976f72-00ef-34a0-aa4b-25e4d1b6d561"
@@ -129,7 +129,7 @@
       }
     },
     {
-      "amount": 0.020476755352200192,
+      "amount": 0.0212,
       "defaultProvider": {
         "@type": "Process",
         "@id": "31cf98ad-c9a3-3c32-ae20-1615683dfdc1"
@@ -157,7 +157,7 @@
       }
     },
     {
-      "amount": 0.016282550980059877,
+      "amount": 0.0184,
       "defaultProvider": {
         "@type": "Process",
         "@id": "675b255f-6eb1-3414-90a0-790c582cb622"
@@ -185,7 +185,7 @@
       }
     },
     {
-      "amount": 0.07149918092978591,
+      "amount": 0.0956,
       "defaultProvider": {
         "@type": "Process",
         "@id": "9d8ad430-506f-375c-8f9f-fd8c09de1760"
@@ -213,7 +213,7 @@
       }
     },
     {
-      "amount": 0.13528780432695023,
+      "amount": 0.1455,
       "defaultProvider": {
         "@type": "Process",
         "@id": "ff34ff9f-78f1-350f-a289-fddaa0d3f6cb"
@@ -265,7 +265,7 @@
       }
     }
   ],
-  "lastChange": "2025-10-17T20:28:10.438202Z",
+  "lastChange": "2025-10-29T12:00:00Z",
   "location": {
     "@type": "Location",
     "@id": "dc634e20-7282-3fe0-b5be-9a2063390544",
@@ -274,7 +274,7 @@
   "name": "Electricity; at grid; generation mix - Brazil",
   "processDocumentation": {
     "completenessDescription": "This process contains no elementary flows. Generation mix of all technologies sums to 100%.\n",
-    "creationDate": "2025-10-17T16:28:10",
+    "creationDate": "2025-10-29T12:00:00",
     "dataCollectionDescription": "Data from Ember Climate were accessed on October 17 2025.\n",
     "dataDocumentor": {
       "@type": "Actor",
@@ -323,8 +323,8 @@
     "technologyDescription": "Generation technologies were mapped to those available in the U.S. Electricity Baseline.\n",
     "timeDescription": "This process reflects the generation mix of the region over the course of the entire year. It reflects the most recently available full year.\n",
     "useAdvice": "This process is intended to connect to electriciy generation processes from the electricity baseline.\n",
-    "validFrom": "2023-01-01T00:00:00",
-    "validUntil": "2023-12-31T00:00:00"
+    "validFrom": "2024-01-01T00:00:00",
+    "validUntil": "2024-12-31T00:00:00"
   },
   "processType": "UNIT_PROCESS",
   "version": "01.00.000"

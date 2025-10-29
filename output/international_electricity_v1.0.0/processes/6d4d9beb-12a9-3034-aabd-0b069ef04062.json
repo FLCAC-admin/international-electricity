@@ -17,7 +17,7 @@
   },
   "exchanges": [
     {
-      "amount": 0.04172916273479483,
+      "amount": 0.0447,
       "defaultProvider": {
         "@type": "Process",
         "@id": "c76033d9-1ac2-3975-b8f3-cbaef8892e75"
@@ -45,7 +45,7 @@
       }
     },
     {
-      "amount": 0.3247444697187925,
+      "amount": 0.3219,
       "defaultProvider": {
         "@type": "Process",
         "@id": "1a4cda28-2d34-3c33-9f94-e2aa49b7fca5"
@@ -73,7 +73,7 @@
       }
     },
     {
-      "amount": 0.3446604352706287,
+      "amount": 0.3407,
       "defaultProvider": {
         "@type": "Process",
         "@id": "af0efb53-bbfe-3b45-9ad7-ecc9d6ddfd74"
@@ -101,7 +101,7 @@
       }
     },
     {
-      "amount": 0.07403176621338392,
+      "amount": 0.0782,
       "defaultProvider": {
         "@type": "Process",
         "@id": "84976f72-00ef-34a0-aa4b-25e4d1b6d561"
@@ -129,7 +129,7 @@
       }
     },
     {
-      "amount": 0.0769421791344253,
+      "amount": 0.0835,
       "defaultProvider": {
         "@type": "Process",
         "@id": "31cf98ad-c9a3-3c32-ae20-1615683dfdc1"
@@ -157,7 +157,7 @@
       }
     },
     {
-      "amount": 0.03228273717878676,
+      "amount": 0.0246,
       "defaultProvider": {
         "@type": "Process",
         "@id": "675b255f-6eb1-3414-90a0-790c582cb622"
@@ -185,7 +185,7 @@
       }
     },
     {
-      "amount": 0.09571583244762746,
+      "amount": 0.0951,
       "defaultProvider": {
         "@type": "Process",
         "@id": "9d8ad430-506f-375c-8f9f-fd8c09de1760"
@@ -213,7 +213,7 @@
       }
     },
     {
-      "amount": 0.009893417301560499,
+      "amount": 0.0113,
       "defaultProvider": {
         "@type": "Process",
         "@id": "ff34ff9f-78f1-350f-a289-fddaa0d3f6cb"
@@ -265,7 +265,7 @@
       }
     }
   ],
-  "lastChange": "2025-10-17T20:28:11.207527Z",
+  "lastChange": "2025-10-29T12:00:00Z",
   "location": {
     "@type": "Location",
     "@id": "55add3d8-45bf-3d87-a9b0-949b0da49c0a",
@@ -274,7 +274,7 @@
   "name": "Electricity; at grid; generation mix - Japan",
   "processDocumentation": {
     "completenessDescription": "This process contains no elementary flows. Generation mix of all technologies sums to 100%.\n",
-    "creationDate": "2025-10-17T16:28:11",
+    "creationDate": "2025-10-29T12:00:00",
     "dataCollectionDescription": "Data from Ember Climate were accessed on October 17 2025.\n",
     "dataDocumentor": {
       "@type": "Actor",
@@ -323,8 +323,8 @@
     "technologyDescription": "Generation technologies were mapped to those available in the U.S. Electricity Baseline.\n",
     "timeDescription": "This process reflects the generation mix of the region over the course of the entire year. It reflects the most recently available full year.\n",
     "useAdvice": "This process is intended to connect to electriciy generation processes from the electricity baseline.\n",
-    "validFrom": "2023-01-01T00:00:00",
-    "validUntil": "2023-12-31T00:00:00"
+    "validFrom": "2024-01-01T00:00:00",
+    "validUntil": "2024-12-31T00:00:00"
   },
   "processType": "UNIT_PROCESS",
   "version": "01.00.000"

@@ -78,6 +78,12 @@ def round_group(group, value_col, digits=4):
 df = (df.groupby("CountryCode", group_keys=False)
       [df.columns].apply(round_group, value_col='share'))
 
+## As needed, write the fuels to a pivot
+(df.pivot_table(index=['Year', 'Area', 'CountryCode', 'Unit'],
+                         columns=['Fuel'],
+                         values='Value', aggfunc='sum')
+             .to_csv('fuel_by_country.csv'))
+
 
 #%% Link to fuel specific flows in eLCI and prepare dataframe for oLCA
 df_olca = pd.concat([(df

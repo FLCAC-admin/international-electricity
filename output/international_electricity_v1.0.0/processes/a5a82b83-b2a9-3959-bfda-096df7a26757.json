@@ -17,7 +17,7 @@
   },
   "exchanges": [
     {
-      "amount": 0.015625,
+      "amount": 0.0156,
       "defaultProvider": {
         "@type": "Process",
         "@id": "c76033d9-1ac2-3975-b8f3-cbaef8892e75"
@@ -157,7 +157,7 @@
       }
     },
     {
-      "amount": 0.984375,
+      "amount": 0.9844,
       "defaultProvider": {
         "@type": "Process",
         "@id": "675b255f-6eb1-3414-90a0-790c582cb622"
@@ -293,7 +293,7 @@
       }
     }
   ],
-  "lastChange": "2025-10-17T20:28:10.420366Z",
+  "lastChange": "2025-10-29T12:00:00Z",
   "location": {
     "@type": "Location",
     "@id": "08424385-5820-39ca-87f4-66f645784636",
@@ -302,7 +302,7 @@
   "name": "Electricity; at grid; generation mix - Bermuda",
   "processDocumentation": {
     "completenessDescription": "This process contains no elementary flows. Generation mix of all technologies sums to 100%.\n",
-    "creationDate": "2025-10-17T16:28:10",
+    "creationDate": "2025-10-29T12:00:00",
     "dataCollectionDescription": "Data from Ember Climate were accessed on October 17 2025.\n",
     "dataDocumentor": {
       "@type": "Actor",

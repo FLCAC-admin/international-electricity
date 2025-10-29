@@ -17,7 +17,7 @@
   },
   "exchanges": [
     {
-      "amount": 0.05223880597014926,
+      "amount": 0.0522,
       "defaultProvider": {
         "@type": "Process",
         "@id": "c76033d9-1ac2-3975-b8f3-cbaef8892e75"
@@ -73,7 +73,7 @@
       }
     },
     {
-      "amount": 0.007462686567164179,
+      "amount": 0.0075,
       "defaultProvider": {
         "@type": "Process",
         "@id": "af0efb53-bbfe-3b45-9ad7-ecc9d6ddfd74"
@@ -157,7 +157,7 @@
       }
     },
     {
-      "amount": 0.9253731343283581,
+      "amount": 0.9254,
       "defaultProvider": {
         "@type": "Process",
         "@id": "675b255f-6eb1-3414-90a0-790c582cb622"
@@ -213,7 +213,7 @@
       }
     },
     {
-      "amount": 0.014925373134328358,
+      "amount": 0.0149,
       "defaultProvider": {
         "@type": "Process",
         "@id": "9d8ad430-506f-375c-8f9f-fd8c09de1760"
@@ -293,7 +293,7 @@
       }
     }
   ],
-  "lastChange": "2025-10-17T20:28:10.625174Z",
+  "lastChange": "2025-10-29T12:00:00Z",
   "location": {
     "@type": "Location",
     "@id": "5e08be98-8691-354c-937b-997b4cb6ad97",
@@ -302,7 +302,7 @@
   "name": "Electricity; at grid; generation mix - Guyana",
   "processDocumentation": {
     "completenessDescription": "This process contains no elementary flows. Generation mix of all technologies sums to 100%.\n",
-    "creationDate": "2025-10-17T16:28:10",
+    "creationDate": "2025-10-29T12:00:00",
     "dataCollectionDescription": "Data from Ember Climate were accessed on October 17 2025.\n",
     "dataDocumentor": {
       "@type": "Actor",

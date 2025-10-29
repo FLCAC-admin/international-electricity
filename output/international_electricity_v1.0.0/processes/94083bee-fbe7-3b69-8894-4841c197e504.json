@@ -17,7 +17,7 @@
   },
   "exchanges": [
     {
-      "amount": 0.002114164904862579,
+      "amount": 0.0021,
       "defaultProvider": {
         "@type": "Process",
         "@id": "c76033d9-1ac2-3975-b8f3-cbaef8892e75"
@@ -73,7 +73,7 @@
       }
     },
     {
-      "amount": 0.1923890063424947,
+      "amount": 0.1924,
       "defaultProvider": {
         "@type": "Process",
         "@id": "af0efb53-bbfe-3b45-9ad7-ecc9d6ddfd74"
@@ -101,7 +101,7 @@
       }
     },
     {
-      "amount": 0.2114164904862579,
+      "amount": 0.2114,
       "defaultProvider": {
         "@type": "Process",
         "@id": "84976f72-00ef-34a0-aa4b-25e4d1b6d561"
@@ -157,7 +157,7 @@
       }
     },
     {
-      "amount": 0.5708245243128964,
+      "amount": 0.5708,
       "defaultProvider": {
         "@type": "Process",
         "@id": "675b255f-6eb1-3414-90a0-790c582cb622"
@@ -185,7 +185,7 @@
       }
     },
     {
-      "amount": 0.021141649048625793,
+      "amount": 0.0212,
       "defaultProvider": {
         "@type": "Process",
         "@id": "27637316-f001-3de6-808c-1955d718adcd"
@@ -213,7 +213,7 @@
       }
     },
     {
-      "amount": 0.002114164904862579,
+      "amount": 0.0021,
       "defaultProvider": {
         "@type": "Process",
         "@id": "9d8ad430-506f-375c-8f9f-fd8c09de1760"
@@ -293,7 +293,7 @@
       }
     }
   ],
-  "lastChange": "2025-10-17T20:28:11.338609Z",
+  "lastChange": "2025-10-29T12:00:00Z",
   "location": {
     "@type": "Location",
     "@id": "235ec523-92b7-3977-939c-f78b62e708d3",
@@ -302,7 +302,7 @@
   "name": "Electricity; at grid; generation mix - Papua New Guinea",
   "processDocumentation": {
     "completenessDescription": "This process contains no elementary flows. Generation mix of all technologies sums to 100%.\n",
-    "creationDate": "2025-10-17T16:28:11",
+    "creationDate": "2025-10-29T12:00:00",
     "dataCollectionDescription": "Data from Ember Climate were accessed on October 17 2025.\n",
     "dataDocumentor": {
       "@type": "Actor",

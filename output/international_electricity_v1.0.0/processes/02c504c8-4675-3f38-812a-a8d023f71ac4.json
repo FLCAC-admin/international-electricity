@@ -17,7 +17,7 @@
   },
   "exchanges": [
     {
-      "amount": 0.06666666666666667,
+      "amount": 0.0667,
       "defaultProvider": {
         "@type": "Process",
         "@id": "c76033d9-1ac2-3975-b8f3-cbaef8892e75"
@@ -213,7 +213,7 @@
       }
     },
     {
-      "amount": 0.13333333333333333,
+      "amount": 0.1333,
       "defaultProvider": {
         "@type": "Process",
         "@id": "9d8ad430-506f-375c-8f9f-fd8c09de1760"
@@ -293,7 +293,7 @@
       }
     }
   ],
-  "lastChange": "2025-10-17T20:28:11.378567Z",
+  "lastChange": "2025-10-29T12:00:00Z",
   "location": {
     "@type": "Location",
     "@id": "742523da-ef59-3b4b-b184-09f46de05d0c",
@@ -302,7 +302,7 @@
   "name": "Electricity; at grid; generation mix - Samoa",
   "processDocumentation": {
     "completenessDescription": "This process contains no elementary flows. Generation mix of all technologies sums to 100%.\n",
-    "creationDate": "2025-10-17T16:28:11",
+    "creationDate": "2025-10-29T12:00:00",
     "dataCollectionDescription": "Data from Ember Climate were accessed on October 17 2025.\n",
     "dataDocumentor": {
       "@type": "Actor",

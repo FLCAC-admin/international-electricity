@@ -101,7 +101,7 @@
       }
     },
     {
-      "amount": 0.7007952286282305,
+      "amount": 0.7008,
       "defaultProvider": {
         "@type": "Process",
         "@id": "84976f72-00ef-34a0-aa4b-25e4d1b6d561"
@@ -185,7 +185,7 @@
       }
     },
     {
-      "amount": 0.2987077534791252,
+      "amount": 0.2987,
       "defaultProvider": {
         "@type": "Process",
         "@id": "27637316-f001-3de6-808c-1955d718adcd"
@@ -241,7 +241,7 @@
       }
     },
     {
-      "amount": 0.0004970178926441351,
+      "amount": 0.0005,
       "defaultProvider": {
         "@type": "Process",
         "@id": "ff34ff9f-78f1-350f-a289-fddaa0d3f6cb"
@@ -293,7 +293,7 @@
       }
     }
   ],
-  "lastChange": "2025-10-17T20:28:11.174274Z",
+  "lastChange": "2025-10-29T12:00:00Z",
   "location": {
     "@type": "Location",
     "@id": "a2a551a6-458a-3de2-a446-cc76d639a9e9",
@@ -302,7 +302,7 @@
   "name": "Electricity; at grid; generation mix - Iceland",
   "processDocumentation": {
     "completenessDescription": "This process contains no elementary flows. Generation mix of all technologies sums to 100%.\n",
-    "creationDate": "2025-10-17T16:28:11",
+    "creationDate": "2025-10-29T12:00:00",
     "dataCollectionDescription": "Data from Ember Climate were accessed on October 17 2025.\n",
     "dataDocumentor": {
       "@type": "Actor",

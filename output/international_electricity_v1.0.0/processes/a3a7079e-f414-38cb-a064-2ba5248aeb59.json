@@ -45,7 +45,7 @@
       }
     },
     {
-      "amount": 0.22499999999999998,
+      "amount": 0.225,
       "defaultProvider": {
         "@type": "Process",
         "@id": "1a4cda28-2d34-3c33-9f94-e2aa49b7fca5"
@@ -213,7 +213,7 @@
       }
     },
     {
-      "amount": 0.024999999999999998,
+      "amount": 0.025,
       "defaultProvider": {
         "@type": "Process",
         "@id": "9d8ad430-506f-375c-8f9f-fd8c09de1760"
@@ -293,7 +293,7 @@
       }
     }
   ],
-  "lastChange": "2025-10-17T20:28:11.313958Z",
+  "lastChange": "2025-10-29T12:00:00Z",
   "location": {
     "@type": "Location",
     "@id": "d4f91763-3649-33c4-bc7a-b917fa990146",
@@ -302,7 +302,7 @@
   "name": "Electricity; at grid; generation mix - Niger (the)",
   "processDocumentation": {
     "completenessDescription": "This process contains no elementary flows. Generation mix of all technologies sums to 100%.\n",
-    "creationDate": "2025-10-17T16:28:11",
+    "creationDate": "2025-10-29T12:00:00",
     "dataCollectionDescription": "Data from Ember Climate were accessed on October 17 2025.\n",
     "dataDocumentor": {
       "@type": "Actor",

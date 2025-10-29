@@ -73,7 +73,7 @@
       }
     },
     {
-      "amount": 0.997511750069118,
+      "amount": 0.9975,
       "defaultProvider": {
         "@type": "Process",
         "@id": "af0efb53-bbfe-3b45-9ad7-ecc9d6ddfd74"
@@ -213,7 +213,7 @@
       }
     },
     {
-      "amount": 0.0024882499308819463,
+      "amount": 0.0025,
       "defaultProvider": {
         "@type": "Process",
         "@id": "9d8ad430-506f-375c-8f9f-fd8c09de1760"
@@ -293,7 +293,7 @@
       }
     }
   ],
-  "lastChange": "2025-10-17T20:28:10.389829Z",
+  "lastChange": "2025-10-29T12:00:00Z",
   "location": {
     "@type": "Location",
     "@id": "c08bba7a-0c03-36f1-951e-8474d853ecbf",
@@ -302,7 +302,7 @@
   "name": "Electricity; at grid; generation mix - Bahrain",
   "processDocumentation": {
     "completenessDescription": "This process contains no elementary flows. Generation mix of all technologies sums to 100%.\n",
-    "creationDate": "2025-10-17T16:28:10",
+    "creationDate": "2025-10-29T12:00:00",
     "dataCollectionDescription": "Data from Ember Climate were accessed on October 17 2025.\n",
     "dataDocumentor": {
       "@type": "Actor",

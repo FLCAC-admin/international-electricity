@@ -17,7 +17,7 @@
   },
   "exchanges": [
     {
-      "amount": 0.16778523489932887,
+      "amount": 0.1678,
       "defaultProvider": {
         "@type": "Process",
         "@id": "c76033d9-1ac2-3975-b8f3-cbaef8892e75"
@@ -73,7 +73,7 @@
       }
     },
     {
-      "amount": 0.738255033557047,
+      "amount": 0.7383,
       "defaultProvider": {
         "@type": "Process",
         "@id": "675b255f-6eb1-3414-90a0-790c582cb622"
@@ -101,7 +101,7 @@
       }
     },
     {
-      "amount": 0.006711409395973154,
+      "amount": 0.0067,
       "defaultProvider": {
         "@type": "Process",
         "@id": "27637316-f001-3de6-808c-1955d718adcd"
@@ -129,7 +129,7 @@
       }
     },
     {
-      "amount": 0.060402684563758385,
+      "amount": 0.0604,
       "defaultProvider": {
         "@type": "Process",
         "@id": "9d8ad430-506f-375c-8f9f-fd8c09de1760"
@@ -157,7 +157,7 @@
       }
     },
     {
-      "amount": 0.026845637583892617,
+      "amount": 0.0268,
       "defaultProvider": {
         "@type": "Process",
         "@id": "ff34ff9f-78f1-350f-a289-fddaa0d3f6cb"
@@ -209,7 +209,7 @@
       }
     }
   ],
-  "lastChange": "2025-10-17T20:28:11.648530Z",
+  "lastChange": "2025-10-29T12:00:00Z",
   "location": {
     "@type": "Location",
     "@id": "1d8a4975-693e-31eb-9ca5-4878098d608f",
@@ -218,7 +218,7 @@
   "name": "Electricity; at grid; generation mix - Martinique",
   "processDocumentation": {
     "completenessDescription": "This process contains no elementary flows. Generation mix of all technologies sums to 100%.\n",
-    "creationDate": "2025-10-17T16:28:11",
+    "creationDate": "2025-10-29T12:00:00",
     "dataCollectionDescription": "Data from Ember Climate were accessed on October 17 2025.\n",
     "dataDocumentor": {
       "@type": "Actor",

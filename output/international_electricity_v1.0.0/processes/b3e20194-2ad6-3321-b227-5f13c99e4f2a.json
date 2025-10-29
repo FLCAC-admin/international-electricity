@@ -17,7 +17,7 @@
   },
   "exchanges": [
     {
-      "amount": 0.005424954792043399,
+      "amount": 0.0054,
       "defaultProvider": {
         "@type": "Process",
         "@id": "c76033d9-1ac2-3975-b8f3-cbaef8892e75"
@@ -101,7 +101,7 @@
       }
     },
     {
-      "amount": 0.9945750452079566,
+      "amount": 0.9946,
       "defaultProvider": {
         "@type": "Process",
         "@id": "84976f72-00ef-34a0-aa4b-25e4d1b6d561"
@@ -293,7 +293,7 @@
       }
     }
   ],
-  "lastChange": "2025-10-17T20:28:11.339887Z",
+  "lastChange": "2025-10-29T12:00:00Z",
   "location": {
     "@type": "Location",
     "@id": "dfed5bc1-77b8-3ab3-97c5-84e06566adc6",
@@ -302,7 +302,7 @@
   "name": "Electricity; at grid; generation mix - Paraguay",
   "processDocumentation": {
     "completenessDescription": "This process contains no elementary flows. Generation mix of all technologies sums to 100%.\n",
-    "creationDate": "2025-10-17T16:28:11",
+    "creationDate": "2025-10-29T12:00:00",
     "dataCollectionDescription": "Data from Ember Climate were accessed on October 17 2025.\n",
     "dataDocumentor": {
       "@type": "Actor",
