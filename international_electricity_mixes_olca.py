@@ -178,9 +178,16 @@ location_objs = build_location_dict(df_olca, locations)
 from flcac_utils.generate_processes import build_flow_dict, \
     build_process_dict, write_objects, validate_exchange_data
 from flcac_utils.util import assign_year_to_meta
+from flcac_utils.commons_api import get_single_object
 
 validate_exchange_data(df_olca)
 flows, new_flows = build_flow_dict(df_olca)
+# Replace local stub with Commons metadata; still write this flow into the zip
+ref_flow = get_single_object(
+    "US Electricity Baseline", "FLOW", meta["Process"]["FlowUUID"])
+flows[ref_flow.id] = ref_flow
+if ref_flow.id not in new_flows:
+    new_flows.append(ref_flow.id)
 processes = {}
 for year in df_olca.Year.unique():
     process_meta = assign_year_to_meta(process_meta, int(year))

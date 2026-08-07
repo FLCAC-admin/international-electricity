@@ -27,7 +27,7 @@
       "flow": {
         "@type": "Flow",
         "@id": "fc406690-160c-37d5-bf36-added9542164",
-        "category": "Technosphere Flows / 22: Utilities / 2211: Electric Power Generation, Transmission and Distribution",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
         "name": "Electricity, AC, 2300-7650 V"
       },
       "flowProperty": {
@@ -55,7 +55,7 @@
       "flow": {
         "@type": "Flow",
         "@id": "fc406690-160c-37d5-bf36-added9542164",
-        "category": "Technosphere Flows / 22: Utilities / 2211: Electric Power Generation, Transmission and Distribution",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
         "name": "Electricity, AC, 2300-7650 V"
       },
       "flowProperty": {
@@ -83,7 +83,7 @@
       "flow": {
         "@type": "Flow",
         "@id": "fc406690-160c-37d5-bf36-added9542164",
-        "category": "Technosphere Flows / 22: Utilities / 2211: Electric Power Generation, Transmission and Distribution",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
         "name": "Electricity, AC, 2300-7650 V"
       },
       "flowProperty": {
@@ -111,7 +111,7 @@
       "flow": {
         "@type": "Flow",
         "@id": "fc406690-160c-37d5-bf36-added9542164",
-        "category": "Technosphere Flows / 22: Utilities / 2211: Electric Power Generation, Transmission and Distribution",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
         "name": "Electricity, AC, 2300-7650 V"
       },
       "flowProperty": {
@@ -135,7 +135,7 @@
       "flow": {
         "@type": "Flow",
         "@id": "fc406690-160c-37d5-bf36-added9542164",
-        "category": "Technosphere Flows / 22: Utilities / 2211: Electric Power Generation, Transmission and Distribution",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
         "name": "Electricity, AC, 2300-7650 V"
       },
       "flowProperty": {
