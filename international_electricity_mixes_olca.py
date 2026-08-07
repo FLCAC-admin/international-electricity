@@ -183,7 +183,7 @@ validate_exchange_data(df_olca)
 flows, new_flows = build_flow_dict(df_olca)
 processes = {}
 for year in df_olca.Year.unique():
-    process_meta = assign_year_to_meta(process_meta, year)
+    process_meta = assign_year_to_meta(process_meta, int(year))
     # Update time period to match year for each region
 
     p_dict = build_process_dict(df_olca.query('Year == @year'),
@@ -199,3 +199,10 @@ for year in df_olca.Year.unique():
 write_objects('international_electricity', flows, new_flows, processes,
               location_objs, source_objs, actor_objs, dq_objs,
               out_path = out_path)
+
+#%% Unzip files to repo
+from flcac_utils.util import extract_latest_zip
+
+extract_latest_zip(out_path,
+                   parent_path,
+                   output_folder_name = Path('output') / 'international_electricity_v1.0.0')

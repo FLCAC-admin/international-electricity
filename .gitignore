@@ -1,5 +1,21 @@
+# Local tooling / env
+.venv/
+.vscode/
+.cursor/
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Secrets
+*.env
+
+# Dataset / build artifacts
 output/*.zip
 output/*/locations/
 data/yearly_full_release*.csv
 fuel_by_country.csv
-*.env
