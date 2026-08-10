@@ -1,9 +1,13 @@
 # international-electricity
 
 Generating international electricity mixes for the [Federal LCA Commons](lcacommons.gov).
-Data are sourced from [Ember](https://ember-energy.org/data/yearly-electricity-data/).
 
-See the [list of countries](country_list.md)
+Each country (except USA) gets two processes in the same zip:
+
+- **At grid:** generation mix from [Ember yearly electricity data](https://ember-energy.org/data/yearly-electricity-data/).
+- **At user:** that mix grossed up by transmission and distribution losses from World Bank [EG.ELC.LOSS.ZS](https://data.worldbank.org/indicator/EG.ELC.LOSS.ZS). Latest loss year ≤ mix year; if no country series, the World BAnk geographic region is used; otherwise the at-user process is omitted. Reference flow is U.S. Electricity, AC, 120 V (LV proxy); HV input is the country at-grid process at `1 / (1 − L)`.
+
+See the [list of countries](country_list.md).
 
 ## Install
 
@@ -11,7 +15,7 @@ Requires [flcac-utils](https://github.com/FLCAC-admin/flcac-utils).
 
 > pip install git+https://github.com/FLCAC-admin/flcac-utils.git
 
-Run [international_electricity_mixes_olca.py](international_electricity_mixes_olca.py)
+Losses are committed as `data/eg_elc_loss_zs.csv`. Refresh with [download_worldbank_td_losses.py](download_worldbank_td_losses.py), then run [international_electricity_mixes_olca.py](international_electricity_mixes_olca.py).
 
 ## Datasets
 

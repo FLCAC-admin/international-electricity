@@ -18,6 +18,7 @@ __pycache__/
 output/*.zip
 output/*/locations/
 output/us_fuel_generation_mixes/
+output/at_user_loss_audit.csv
 data/yearly_full_release*.csv
 fuel_by_country.csv
 data/.archive/*

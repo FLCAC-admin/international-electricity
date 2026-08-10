@@ -2,12 +2,13 @@
 Generate processes of international electricity mixes
 """
 
+import copy
 import pandas as pd
 import numpy as np
 from pathlib import Path
 import yaml
 import sys
-# from esupy.util import make_uuid
+from esupy.util import make_uuid
 
 parent_path = Path(__file__).parent
 data_path = parent_path / 'data'
@@ -163,13 +164,21 @@ from flcac_utils.util import extract_actors_from_process_meta, \
     extract_sources_from_process_meta, extract_dqsystems
 
 with open(data_path / 'electricity_process_metadata.yaml') as f:
-    process_meta = yaml.safe_load(f)
+    meta_docs = yaml.safe_load(f)
 
-(process_meta, source_objs) = extract_sources_from_process_meta(
-    process_meta, bib_path = data_path / 'electricity.bib')
-(process_meta, actor_objs) = extract_actors_from_process_meta(process_meta)
+grid_meta = meta_docs['AtGrid']
+user_meta_base = meta_docs['AtUser']
+(grid_meta, source_objs) = extract_sources_from_process_meta(
+    grid_meta, bib_path=data_path / 'electricity.bib')
+(user_meta_base, source_objs_u) = extract_sources_from_process_meta(
+    user_meta_base, bib_path=data_path / 'electricity.bib')
+source_objs.update(source_objs_u)
+(grid_meta, actor_objs) = extract_actors_from_process_meta(grid_meta)
+(user_meta_base, actor_objs_u) = extract_actors_from_process_meta(user_meta_base)
+actor_objs.update(actor_objs_u)
 dq_objs = extract_dqsystems(meta['DQI']['dqSystem'])
-process_meta['dq_entry'] = format_dqi_score(meta['DQI']['Process'])
+grid_meta['dq_entry'] = format_dqi_score(meta['DQI']['Process'])
+user_meta_base['dq_entry'] = format_dqi_score(meta['DQI']['Process'])
 
 # generate dictionary of location objects
 location_objs = build_location_dict(df_olca, locations)
@@ -190,18 +199,133 @@ if ref_flow.id not in new_flows:
     new_flows.append(ref_flow.id)
 processes = {}
 for year in df_olca.Year.unique():
-    process_meta = assign_year_to_meta(process_meta, int(year))
-    # Update time period to match year for each region
-
-    p_dict = build_process_dict(df_olca.query('Year == @year'),
-                                flows,
-                                meta=process_meta,
-                                loc_objs=location_objs,
-                                source_objs=source_objs,
-                                actor_objs=actor_objs,
-                                dq_objs=dq_objs,
-                                )
+    p_dict = build_process_dict(
+        df_olca.query('Year == @year'),
+        flows,
+        meta=assign_year_to_meta(copy.deepcopy(grid_meta), int(year)),
+        loc_objs=location_objs,
+        source_objs=source_objs,
+        actor_objs=actor_objs,
+        dq_objs=dq_objs,
+        )
     processes.update(p_dict)
+
+#%% At-user consumption mixes (T&D gross-up)
+wb_csv = data_path / 'eg_elc_loss_zs.csv'
+if not wb_csv.exists():
+    raise FileNotFoundError(
+        f"Missing {wb_csv}. Run download_worldbank_td_losses.py first.")
+wb = pd.read_csv(wb_csv)
+country_wb = wb.query('series_type == "country"')
+region_wb = wb.query('series_type == "geographic_region"')
+iso_region = (wb.query('series_type == "iso3_region"')
+              .drop_duplicates('iso3').set_index('iso3'))
+at_user = meta['AtUser']
+base_dqi = format_dqi_score(meta['DQI']['Flow'])
+
+grid_countries = (df_olca[['Area', 'CountryCode', 'Year', 'location']]
+                  .drop_duplicates())
+audit_rows, user_rows, user_info = [], [], {}
+for _, c in grid_countries.iterrows():
+    iso3, area, y_mix, loc = c.CountryCode, c.Area, int(c.Year), c.location
+    rec = dict(CountryCode=iso3, Area=area, mix_year=y_mix, loss_year=None,
+               loss_source='missing_wb_loss', loss_geo_name='', loss_geo_code='',
+               L=None)
+    hit = country_wb[(country_wb.iso3 == iso3) & (country_wb.year <= y_mix)]
+    if len(hit):
+        r = hit.sort_values('year').iloc[-1]
+        L = float(r.value_pct) / 100
+        rec.update(loss_year=int(r.year), L=L, loss_geo_name=r['name'],
+                   loss_geo_code=iso3,
+                   loss_source='invalid_L' if L >= 1 else 'country')
+    else:
+        if iso3 in iso_region.index:
+            rcode = iso_region.loc[iso3, 'region_code']
+            rname = iso_region.loc[iso3, 'region_name']
+        else:
+            rcode, rname = '', ''
+        rhit = (region_wb[(region_wb.iso3 == rcode) & (region_wb.year <= y_mix)]
+                if rcode else hit)
+        if len(rhit):
+            r = rhit.sort_values('year').iloc[-1]
+            L = float(r.value_pct) / 100
+            rec.update(loss_year=int(r.year), L=L,
+                       loss_geo_name=rname or r['name'], loss_geo_code=rcode,
+                       loss_source='invalid_L' if L >= 1 else 'region')
+    audit_rows.append(rec)
+    if rec['loss_source'] not in ('country', 'region'):
+        continue
+    L, y_loss = rec['L'], rec['loss_year']
+    pname = at_user['ProcessName'].replace('<location>', area)
+    dqi = base_dqi
+    if y_loss != y_mix:
+        dqi = increment_dqi_value(dqi, 2)
+    if rec['loss_source'] == 'region':
+        dqi = increment_dqi_value(dqi, 3)
+    dqi = '(' + ';'.join(str(min(int(x), 5))
+                         for x in dqi.strip('()').split(';')) + ')'
+    grid_uuid = make_uuid(meta['Process']['ProcessName'].replace('<location>', area))
+    common = dict(ProcessName=pname, ProcessCategory=at_user['ProcessCategory'],
+                  location=loc, FlowType='PRODUCT_FLOW', unit=at_user['Unit'])
+    user_rows += [
+        {**common, 'FlowName': at_user['FlowName'], 'FlowUUID': at_user['FlowUUID'],
+         'Context': at_user['FlowContext'], 'IsInput': False, 'reference': True,
+         'amount': 1.0, 'default_provider': '', 'exchange_dqi': '',
+         'description': ''},
+        {**common, 'FlowName': meta['Process']['FlowName'],
+         'FlowUUID': meta['Process']['FlowUUID'],
+         'Context': meta['Process']['FlowContext'], 'IsInput': True,
+         'reference': False, 'amount': 1 / (1 - L),
+         'default_provider': grid_uuid, 'exchange_dqi': dqi, 'description': ''},
+    ]
+    user_info[pname] = rec
+
+pd.DataFrame(audit_rows).to_csv(out_path / 'at_user_loss_audit.csv', index=False)
+print(pd.DataFrame(audit_rows).loss_source.value_counts().to_string())
+
+if user_rows:
+    df_user = pd.DataFrame(user_rows)
+    validate_exchange_data(df_user)
+    lv_flow = get_single_object(
+        "US Electricity Baseline", "FLOW", at_user["FlowUUID"])
+    flows[lv_flow.id] = lv_flow
+    if lv_flow.id not in new_flows:
+        new_flows.append(lv_flow.id)
+    for pname, rec in user_info.items():
+        area, iso3, L = rec['Area'], rec['CountryCode'], rec['L']
+        y_mix, y_loss = rec['mix_year'], rec['loss_year']
+        meta_u = copy.deepcopy(user_meta_base)
+        if rec['loss_source'] == 'country':
+            meta_u['description'] = (
+                f"At-grid generation mix for {area} ({iso3}), year {y_mix}, "
+                f"grossed up by T&D loss EG.ELC.LOSS.ZS = {L:.4f} for this country, "
+                f"WB year {y_loss}. Reference flow is U.S. Electricity, AC, 120 V proxy.")
+            meta_u['geography_description'] = (
+                f"End use in {area}. T&D loss factor is for this country ({iso3}).")
+            advice_extra = ""
+        else:
+            meta_u['description'] = (
+                f"At-grid generation mix for {area} ({iso3}), year {y_mix}, "
+                f"grossed up by T&D loss EG.ELC.LOSS.ZS = {L:.4f} from WB geographic "
+                f"region {rec['loss_geo_name']} ({rec['loss_geo_code']}) used as fallback "
+                f"(no country loss <= {y_mix}). WB year {y_loss}. "
+                "Reference flow is U.S. Electricity, AC, 120 V proxy.")
+            meta_u['geography_description'] = (
+                f"End use in {area}. T&D loss factor is for WB region "
+                f"{rec['loss_geo_name']} ({rec['loss_geo_code']}), "
+                f"not {area} specifically.")
+            advice_extra = " Check description: loss factor is regional."
+        meta_u['time_description'] = (
+            f"Process year follows WB T&D loss year {y_loss}. "
+            f"Upstream at-grid mix year is {y_mix}.")
+        meta_u['use_advice'] = (
+            f"Use for end-use electricity demand in {area}. "
+            f"LV reference is a U.S. 120 V proxy.{advice_extra}")
+        assign_year_to_meta(meta_u, int(y_loss))
+        processes.update(build_process_dict(
+            df_user[df_user.ProcessName == pname],
+            flows, meta=meta_u, loc_objs=location_objs,
+            source_objs=source_objs, actor_objs=actor_objs, dq_objs=dq_objs))
 
 write_objects('international_electricity', flows, new_flows, processes,
               location_objs, source_objs, actor_objs, dq_objs,
