@@ -11,15 +11,15 @@ Process:
   FlowContext: 'Technosphere Flows / 22: Utilities / 2211: Electric Power Generation, Transmission and Distribution'
   Unit: 'MJ'
   ProcessName: 'Electricity; at grid; generation mix - <location>'
-  ProcessCategory: '22: Utilities / 2211: Electric Power Generation, Transmission and Distribution'
+  ProcessCategory: '22: Utilities / 2211: Electric Power Generation, Transmission and Distribution / International'
 
 AtUser:
   FlowName: 'Electricity, AC, 120 V'
   FlowUUID: '3bca3bc6-2443-3184-8976-72dc98d258f6'
   FlowContext: 'Technosphere Flows / 22: Utilities / 2211: Electric Power Generation, Transmission and Distribution'
   Unit: 'MJ'
-  ProcessName: 'Electricity; at user; consumption mix - <location>'
-  ProcessCategory: '22: Utilities / 2211: Electric Power Generation, Transmission and Distribution'
+  ProcessName: 'Electricity; at user; generation mix - <location>'
+  ProcessCategory: '22: Utilities / 2211: Electric Power Generation, Transmission and Distribution / International'
 
 ## Ember fuel categories linked to US-average resource processes
 Fuel:

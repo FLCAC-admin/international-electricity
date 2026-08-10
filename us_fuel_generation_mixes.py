@@ -19,11 +19,9 @@ Inputs
 - US Electricity Baseline processes from the Federal LCA Commons
   (flcac-utils ``read_commons_data``)
 
-Outputs (under output/us_fuel_generation_mixes/)
-- audit CSVs (resource_summary.csv, resource_ba_weights.csv)
-- us_fuel_generation_mixes_olca2.0_*.zip via flcac-utils ``write_objects``
-- extracted JSON-LD (via ``extract_latest_zip``) for import into a DB that
-  already includes the US Electricity Baseline
+Outputs
+- zip: ``output/us_fuel_generation_mixes_olca2.0_*.zip`` (same folder as international)
+- extract + audit CSVs: ``output/us_fuel_generation_mixes/``
 """
 
 from __future__ import annotations
@@ -43,14 +41,17 @@ from flcac_utils.generate_processes import write_objects
 from flcac_utils.util import extract_latest_zip
 
 BASE_DIR = Path(__file__).resolve().parent
-OUTPUT_DIR = BASE_DIR / "output" / "us_fuel_generation_mixes"
-EXTRACT_DIR_NAME = Path("output") / "us_fuel_generation_mixes" / "jsonld"
+ZIP_DIR = BASE_DIR / "output"
+EXTRACT_DIR = BASE_DIR / "output" / "us_fuel_generation_mixes"
 
 BASELINE_REPO_KEY = "US Electricity Baseline"
 US_GRID_CONSUMPTION_MIX_NAME = "Electricity; at grid; consumption mix - US - US"
 GRID_GENERATION_MIX_PREFIX = "Electricity; at grid; generation mix - "
 RESOURCE_PROCESS_PATTERN = re.compile(r"^Electricity - ([^-]+?) - (.+)$")
 REFERENCE_ELECTRICITY_FLOW_ID = "fc406690-160c-37d5-bf36-added9542164"
+PROCESS_CATEGORY = (
+    "22: Utilities / 2211: Electric Power Generation, Transmission and Distribution / International"
+)
 
 # Skip synthetic mixes by default. Keep OTHF and MIXED because they are
 # represented as explicit resource categories in the baseline package.
@@ -207,11 +208,7 @@ def _aggregate_resource_process(resource, contributors, processes_by_id, us_grid
     if isinstance(us_grid_mix_process.get("location"), dict):
         aggregated_process["location"] = copy.deepcopy(us_grid_mix_process["location"])
 
-    category = str(aggregated_process.get("category", "")).strip()
-    if category:
-        parts = category.split("/")
-        if parts:
-            aggregated_process["category"] = f"{parts[0]}/US_average/{resource}"
+    aggregated_process["category"] = PROCESS_CATEGORY
 
     reference_exchange = copy.deepcopy(_find_reference_exchange(base_process))
     reference_exchange["@id"] = make_uuid(
@@ -264,9 +261,9 @@ def _aggregate_resource_process(resource, contributors, processes_by_id, us_grid
 
 
 def _write_audit_csvs(aggregated_results):
-    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    EXTRACT_DIR.mkdir(parents=True, exist_ok=True)
 
-    summary_path = OUTPUT_DIR / "resource_summary.csv"
+    summary_path = EXTRACT_DIR / "resource_summary.csv"
     with summary_path.open("w", newline="", encoding="utf-8") as handle:
         writer = csv.writer(handle)
         writer.writerow(["resource", "us_share_from_mix", "contributors"])
@@ -280,7 +277,7 @@ def _write_audit_csvs(aggregated_results):
                 ]
             )
 
-    detail_path = OUTPUT_DIR / "resource_ba_weights.csv"
+    detail_path = EXTRACT_DIR / "resource_ba_weights.csv"
     with detail_path.open("w", newline="", encoding="utf-8") as handle:
         writer = csv.writer(handle)
         writer.writerow(
@@ -315,7 +312,7 @@ def _write_audit_csvs(aggregated_results):
 
 def _write_olca_package(processes_for_package):
     """Write JSON-LD zip via flcac-utils and extract with extract_latest_zip."""
-    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    ZIP_DIR.mkdir(parents=True, exist_ok=True)
     processes = {
         str(process["@id"]): olca.Process.from_dict(process)
         for process in processes_for_package
@@ -325,16 +322,18 @@ def _write_olca_package(processes_for_package):
         {},
         [],
         processes,
-        out_path=OUTPUT_DIR,
+        out_path=ZIP_DIR,
     )
-
-    extract_dir = BASE_DIR / EXTRACT_DIR_NAME
-    if extract_dir.exists():
-        shutil.rmtree(extract_dir)
+    zip_path = max(
+        ZIP_DIR.glob("us_fuel_generation_mixes_olca2.0_*.zip"),
+        key=lambda p: p.stat().st_mtime,
+    )
+    if EXTRACT_DIR.exists():
+        shutil.rmtree(EXTRACT_DIR)
     return extract_latest_zip(
-        OUTPUT_DIR,
+        zip_path,
         BASE_DIR,
-        output_folder_name=EXTRACT_DIR_NAME,
+        output_folder_name=Path("output") / "us_fuel_generation_mixes",
     )
 
 
@@ -363,13 +362,13 @@ def main():
     if not aggregated_results:
         raise ValueError("No resource aggregates were generated.")
 
-    summary_path, detail_path = _write_audit_csvs(aggregated_results)
     package_dir = _write_olca_package(
         [result["process"] for result in aggregated_results.values()]
     )
+    summary_path, detail_path = _write_audit_csvs(aggregated_results)
 
     print(f"Generated {len(aggregated_results)} US-average resource processes.")
-    print(f"Output directory: {OUTPUT_DIR}")
+    print(f"Zip directory: {ZIP_DIR}")
     print(f"Summary CSV: {summary_path}")
     print(f"Detailed BA weights CSV: {detail_path}")
     print(f"Extracted JSON-LD: {package_dir}")

@@ -1,4 +1,4 @@
-## At-grid generation mix and at-user consumption mix are independent.
+## At-grid generation mix and at-user generation mix are independent.
 ## Script loads AtGrid / AtUser separately; do not share scientific metadata.
 
 AtGrid:
@@ -104,7 +104,7 @@ AtUser:
 
   modeling_constants_description: >
       L is EG.ELC.LOSS.ZS as a fraction of output. Amount on the HV input is
-      1 / (1 - L). Missing country series use the WB geographic region; otherwise
+      1 / (1 - L). Missing country series use the World Bank geographic region; otherwise
       the at-user process is omitted.
 
   completeness_description: >

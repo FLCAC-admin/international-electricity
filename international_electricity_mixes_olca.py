@@ -182,6 +182,8 @@ user_meta_base['dq_entry'] = format_dqi_score(meta['DQI']['Process'])
 
 # generate dictionary of location objects
 location_objs = build_location_dict(df_olca, locations)
+for loc in location_objs.values():
+    loc.category = "Locations/Country"
 
 #%% Create json file
 from flcac_utils.generate_processes import build_flow_dict, \
@@ -210,7 +212,7 @@ for year in df_olca.Year.unique():
         )
     processes.update(p_dict)
 
-#%% At-user consumption mixes (T&D gross-up)
+#%% At-user generation mixes (T&D gross-up)
 wb_csv = data_path / 'eg_elc_loss_zs.csv'
 if not wb_csv.exists():
     raise FileNotFoundError(
@@ -299,24 +301,25 @@ if user_rows:
             meta_u['description'] = (
                 f"At-grid generation mix for {area} ({iso3}), year {y_mix}, "
                 f"grossed up by T&D loss EG.ELC.LOSS.ZS = {L:.4f} for this country, "
-                f"WB year {y_loss}. Reference flow is U.S. Electricity, AC, 120 V proxy.")
+                f"World Bank year {y_loss}. Reference flow is U.S. Electricity, AC, 120 V proxy.")
             meta_u['geography_description'] = (
                 f"End use in {area}. T&D loss factor is for this country ({iso3}).")
             advice_extra = ""
         else:
             meta_u['description'] = (
                 f"At-grid generation mix for {area} ({iso3}), year {y_mix}, "
-                f"grossed up by T&D loss EG.ELC.LOSS.ZS = {L:.4f} from WB geographic "
-                f"region {rec['loss_geo_name']} ({rec['loss_geo_code']}) used as fallback "
-                f"(no country loss <= {y_mix}). WB year {y_loss}. "
+                f"grossed up by T&D loss EG.ELC.LOSS.ZS = {L:.4f} from World Bank "
+                f"geographic region {rec['loss_geo_name']} ({rec['loss_geo_code']}) "
+                f"used as fallback (no country loss <= {y_mix}). "
+                f"World Bank year {y_loss}. "
                 "Reference flow is U.S. Electricity, AC, 120 V proxy.")
             meta_u['geography_description'] = (
-                f"End use in {area}. T&D loss factor is for WB region "
+                f"End use in {area}. T&D loss factor is for World Bank region "
                 f"{rec['loss_geo_name']} ({rec['loss_geo_code']}), "
                 f"not {area} specifically.")
             advice_extra = " Check description: loss factor is regional."
         meta_u['time_description'] = (
-            f"Process year follows WB T&D loss year {y_loss}. "
+            f"Process year follows World Bank T&D loss year {y_loss}. "
             f"Upstream at-grid mix year is {y_mix}.")
         meta_u['use_advice'] = (
             f"Use for end-use electricity demand in {area}. "
@@ -334,6 +337,8 @@ write_objects('international_electricity', flows, new_flows, processes,
 #%% Unzip files to repo
 from flcac_utils.util import extract_latest_zip
 
-extract_latest_zip(out_path,
+zip_path = max(out_path.glob('international_electricity_olca2.0_*.zip'),
+               key=lambda p: p.stat().st_mtime)
+extract_latest_zip(zip_path,
                    parent_path,
                    output_folder_name = Path('output') / 'international_electricity_v1.0.0')
