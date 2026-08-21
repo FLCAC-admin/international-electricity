@@ -1,0 +1,1616 @@
+{
+  "@type": "Process",
+  "@id": "d0e022e1-5d3e-3900-8205-d6b98f845d44",
+  "allocationFactors": [],
+  "category": "22: Utilities/2211: Electric Power Generation, Transmission and Distribution/SOLAR",
+  "description": "US-average resource process represented as a balancing-authority provider mix. Each input exchange links to a BA resource process and uses a normalized weight back-calculated from the process 'Electricity; at grid; consumption mix - US - US'.",
+  "dqEntry": "(2;4)",
+  "dqSystem": {
+    "@type": "DQSystem",
+    "@id": "70bf370f-9912-4ec1-baa3-fbd4eaf85a10",
+    "name": "US EPA - Process Pedigree Matrix"
+  },
+  "exchangeDqSystem": {
+    "@type": "DQSystem",
+    "@id": "d13b2bc4-5e84-4cc8-a6be-9101ebb252ff",
+    "name": "US EPA - Flow Pedigree Matrix"
+  },
+  "exchanges": [
+    {
+      "amount": 1.0,
+      "description": "",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 1,
+      "isAvoidedProduct": false,
+      "isInput": false,
+      "isQuantitativeReference": true,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.252117349965773,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "7b0a1fe7-1e20-3960-a03b-8f8caeaec34b",
+        "name": "Electricity - SOLAR - California Independent System Operator"
+      },
+      "description": "California Independent System Operator",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 2,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.15343623127748365,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "f34369c5-a087-3df8-aea9-ce59f90e07d6",
+        "name": "Electricity - SOLAR - Electric Reliability Council of Texas, Inc."
+      },
+      "description": "Electric Reliability Council of Texas, Inc.",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 3,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.07307933523498346,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "2c1a641e-b6be-35a0-ab45-03ebd7a75f72",
+        "name": "Electricity - SOLAR - PJM Interconnection, LLC"
+      },
+      "description": "PJM Interconnection, LLC",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 4,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.055639410128617915,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "5d2207ea-24e6-3b4c-a4e7-3897d4c1a042",
+        "name": "Electricity - SOLAR - Midcontinent Independent System Operator, Inc."
+      },
+      "description": "Midcontinent Independent System Operator, Inc.",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 5,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.0497345258879729,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "685176ac-a59b-321b-9f9f-f7237114f179",
+        "name": "Electricity - SOLAR - Florida Power & Light Co."
+      },
+      "description": "Florida Power & Light Co.",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 6,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.04582247670738487,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "4c475045-e4f3-3a71-861e-b7bb0c0011c4",
+        "name": "Electricity - SOLAR - Southern Company Services, Inc. - Trans"
+      },
+      "description": "Southern Company Services, Inc. - Trans",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 7,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.04497523686277801,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "3ea76335-a548-3a86-87c3-1e09c89bb18a",
+        "name": "Electricity - SOLAR - Nevada Power Company"
+      },
+      "description": "Nevada Power Company",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 8,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.02741830162033667,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "49bdb021-3c91-32c5-82b6-951073a5e62a",
+        "name": "Electricity - SOLAR - Duke Energy Progress East"
+      },
+      "description": "Duke Energy Progress East",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 9,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.02653659324409994,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "79200770-7081-3318-975f-09ea514815e2",
+        "name": "Electricity - SOLAR - Los Angeles Department of Water and Power"
+      },
+      "description": "Los Angeles Department of Water and Power",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 10,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.023731799081856547,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "8ec39c79-803c-35bf-92b2-168d38ab056d",
+        "name": "Electricity - SOLAR - Duke Energy Progress West"
+      },
+      "description": "Duke Energy Progress West",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 11,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.022716740045078263,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "8b073a83-751b-3d55-9812-0e473dc37e86",
+        "name": "Electricity - SOLAR - PacifiCorp East"
+      },
+      "description": "PacifiCorp East",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 12,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.021759115850814324,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "6f15af3b-5738-3376-80b1-9edce6b803be",
+        "name": "Electricity - SOLAR - ISO New England"
+      },
+      "description": "ISO New England",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 13,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.018918693683804555,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "8d01a30f-06f4-3478-adda-dfa1eb8e3772",
+        "name": "Electricity - SOLAR - Public Service Company of Colorado"
+      },
+      "description": "Public Service Company of Colorado",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 14,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.01795785113736775,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "00ffef59-551a-3b98-9ce8-580729c21ed6",
+        "name": "Electricity - SOLAR - Arizona Public Service Company"
+      },
+      "description": "Arizona Public Service Company",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 15,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.016984601174808614,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "e3eecaa9-adc4-3ce4-bd8e-23cefd823371",
+        "name": "Electricity - SOLAR - PacifiCorp West"
+      },
+      "description": "PacifiCorp West",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 16,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.016644169198631462,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "3378c3fe-8709-34d1-97b9-379ca4532219",
+        "name": "Electricity - SOLAR - Duke Energy Carolinas"
+      },
+      "description": "Duke Energy Carolinas",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 17,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.015380186033596345,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "0b43fe37-0128-3e68-8b77-eab8724ddf38",
+        "name": "Electricity - SOLAR - Duke Energy Florida, Inc."
+      },
+      "description": "Duke Energy Florida, Inc.",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 18,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.012018771437632143,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "02b15fe4-1290-3b4a-863d-2928946b0592",
+        "name": "Electricity - SOLAR - New York Independent System Operator"
+      },
+      "description": "New York Independent System Operator",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 19,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.011800416715492642,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "436baf5d-ede5-32f4-aa4b-64f55cd958a7",
+        "name": "Electricity - SOLAR - Dominion Energy South Carolina, Inc."
+      },
+      "description": "Dominion Energy South Carolina, Inc.",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 20,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.01072841196908607,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "a1a79a48-9c0f-3897-b203-4b11a68d9ea9",
+        "name": "Electricity - SOLAR - Tampa Electric Company"
+      },
+      "description": "Tampa Electric Company",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 21,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.008513204349307494,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "9b743fd4-2adf-3544-9cf9-028a39fa0694",
+        "name": "Electricity - SOLAR - Public Service Company of New Mexico"
+      },
+      "description": "Public Service Company of New Mexico",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 22,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.008263325273001599,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "0f1d050a-5a73-3812-a217-bdf1ecba9a58",
+        "name": "Electricity - SOLAR - Salt River Project Agricultural Improvement and Power District"
+      },
+      "description": "Salt River Project Agricultural Improvement and Power District",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 23,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.008236243400411115,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "9a69a316-1e7f-3aad-bc9a-2981667f1898",
+        "name": "Electricity - SOLAR - Idaho Power Company"
+      },
+      "description": "Idaho Power Company",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 24,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.007843652676589466,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "112e92d6-a443-3fe1-a2c2-5684dec75d94",
+        "name": "Electricity - SOLAR - Tennessee Valley Authority"
+      },
+      "description": "Tennessee Valley Authority",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 25,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.005146960084621894,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "386dfb61-4fcd-3321-a7bf-5715c8a6f6b4",
+        "name": "Electricity - SOLAR - Southwest Power Pool"
+      },
+      "description": "Southwest Power Pool",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 26,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.005127932280023516,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "9a8a6a5d-7da9-3920-960d-f17dcd6c3d53",
+        "name": "Electricity - SOLAR - Avangrid Renewables, LLC"
+      },
+      "description": "Avangrid Renewables, LLC",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 27,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.004856898241492367,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "cc914db0-7098-3f53-b447-b3d5bfe0de94",
+        "name": "Electricity - SOLAR - Tucson Electric Power"
+      },
+      "description": "Tucson Electric Power",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 28,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.004782155524710408,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "e0a163f3-c694-3870-876f-144c988f2b74",
+        "name": "Electricity - SOLAR - Western Area Power Administration - Desert Southwest Region"
+      },
+      "description": "Western Area Power Administration - Desert Southwest Region",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 29,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.0047692794667003905,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "9e8e26a1-3cdc-32c2-ad17-9f3a571f0f35",
+        "name": "Electricity - SOLAR - Imperial Irrigation District"
+      },
+      "description": "Imperial Irrigation District",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 30,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.004446455802849016,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "0ee4ec84-7cf5-328f-a759-23f47d1d6c82",
+        "name": "Electricity - SOLAR - El Paso Electric Company"
+      },
+      "description": "El Paso Electric Company",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 31,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.0039223979072654834,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "f7d850f2-c3b3-34c5-99fa-60a33dcc3e25",
+        "name": "Electricity - SOLAR - South Carolina Public Service Authority"
+      },
+      "description": "South Carolina Public Service Authority",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 32,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.0032781377288139068,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "f557ef89-6b90-3c1f-9b4c-af182a47866c",
+        "name": "Electricity - SOLAR - Florida Municipal Power Pool"
+      },
+      "description": "Florida Municipal Power Pool",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 33,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.0032698486668064704,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "0e72e345-da1e-3abb-9b3d-b3a010f33e75",
+        "name": "Electricity - SOLAR - Balancing Authority of Northern California"
+      },
+      "description": "Balancing Authority of Northern California",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 34,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.002840646102502048,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "088b92dd-7a3b-340f-b7a7-0f7c2a52a37c",
+        "name": "Electricity - SOLAR - Western Area Power Administration - Rocky Mountain Region"
+      },
+      "description": "Western Area Power Administration - Rocky Mountain Region",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 35,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.0021210924849523146,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "1d76ff0d-166f-31ab-a320-8fddd0d8b2ea",
+        "name": "Electricity - SOLAR - Portland General Electric Company"
+      },
+      "description": "Portland General Electric Company",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 36,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.0014061092385325592,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "50322b03-5add-38fa-a684-dd140492dc26",
+        "name": "Electricity - SOLAR - NorthWestern Corporation"
+      },
+      "description": "NorthWestern Corporation",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 37,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.0011748160684812547,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "0c5b364c-bebe-356e-aff7-8c4d294d2d22",
+        "name": "Electricity - SOLAR - Bonneville Power Administration"
+      },
+      "description": "Bonneville Power Administration",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 38,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.0006492518046222316,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "6244affe-a305-30e3-b32a-8aa79c58f320",
+        "name": "Electricity - SOLAR - City of Tallahassee"
+      },
+      "description": "City of Tallahassee",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 39,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.00046103854928471687,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "23864ebf-733f-3004-935d-7a5f2d8cc688",
+        "name": "Electricity - SOLAR - JEA"
+      },
+      "description": "JEA",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 40,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.0003647230324225849,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "b4fa9f99-a550-36fb-8148-b60f51d3ff54",
+        "name": "Electricity - SOLAR - Avista Corporation"
+      },
+      "description": "Avista Corporation",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 41,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.00032831728959109243,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "a844eac3-3fe8-37c4-9b1a-5edb3a096918",
+        "name": "Electricity - SOLAR - Puget Sound Energy, Inc."
+      },
+      "description": "Puget Sound Energy, Inc.",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 42,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.0003207822877617574,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "eda53320-2948-330d-9da5-3d26041d4803",
+        "name": "Electricity - SOLAR - Southeastern Power Administration"
+      },
+      "description": "Southeastern Power Administration",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 43,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.0003161381168486822,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "273b171b-3586-3e1e-a54c-a2c90550de1a",
+        "name": "Electricity - SOLAR - Seminole Electric Cooperative"
+      },
+      "description": "Seminole Electric Cooperative",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 44,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.00011798773128449698,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "67c7e5dd-bc9f-329d-8b0d-9bb4d7ea0889",
+        "name": "Electricity - SOLAR - Southwestern Power Administration"
+      },
+      "description": "Southwestern Power Administration",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 45,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 2.8422940859846653e-05,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "7f18060f-81ac-3985-afdd-976caa30cfab",
+        "name": "Electricity - SOLAR - Gainesville Regional Utilities"
+      },
+      "description": "Gainesville Regional Utilities",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 46,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 1.3965692664064456e-05,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "ee8ec87f-eadf-3ac0-a708-aef3f98c939d",
+        "name": "Electricity - SOLAR - Associated Electric Cooperative, Inc."
+      },
+      "description": "Associated Electric Cooperative, Inc.",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 47,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    }
+  ],
+  "isInfrastructureProcess": false,
+  "lastChange": "2026-08-21T16:16:34.964Z",
+  "lastInternalId": 47,
+  "location": {
+    "@type": "Location",
+    "@id": "0b3b97fa-6688-3c56-88ee-4ae80ec0c3c2",
+    "category": "Country",
+    "name": "United States of America (the)"
+  },
+  "name": "Electricity - SOLAR - US average",
+  "parameters": [],
+  "processDocumentation": {
+    "completenessDescription": "This process contains no elementary flows. Provider weights sum to 1.",
+    "creationDate": "2026-08-21T12:00:00",
+    "dataCollectionDescription": "Not applicable.",
+    "dataDocumentor": {
+      "@type": "Actor",
+      "@id": "38e67478-a915-43d9-ad67-e25db79a4acc",
+      "category": "Organisations",
+      "name": "ERG"
+    },
+    "dataGenerator": {
+      "@type": "Actor",
+      "@id": "38e67478-a915-43d9-ad67-e25db79a4acc",
+      "category": "Organisations",
+      "name": "ERG"
+    },
+    "dataSelectionDescription": "Balancing-authority resource shares are taken from the US Electricity Baseline process 'Electricity; at grid; consumption mix - US - US'.",
+    "dataTreatmentDescription": "BA contributions are normalized within each resource to form a US-average provider mix.",
+    "geographyDescription": "This process represents a US-average mix of balancing-authority resource processes for one fuel.",
+    "intendedApplication": "US-average fuel-resource mixer for use with the U.S. Electricity Baseline.",
+    "inventoryMethodDescription": "Not applicable; this process contains only technosphere flows.",
+    "modelingConstantsDescription": "Provider weights are contribution = US_BA_weight \u00d7 BA_resource_fraction, normalized within the resource so BA providers sum to 1.",
+    "projectDescription": "This dataset was developed by the Federal LCA Commons Data Curator Eastern Research Group, Inc. (ERG) under subcontract (SUB-2024-10066) to the National Renewable Energy Laboratory under Department of Energy (DOE) Prime Contract No. DE-AC36-08GO28308. The work is funded by DOE's Advanced Materials & Manufacturing Technologies Office (AMMTO).",
+    "publication": {
+      "@type": "Source",
+      "@id": "3da34d38-4230-3751-9ed6-327a8bf70a0c",
+      "name": "ERG, International Electricity"
+    },
+    "restrictionsDescription": "These U.S. LCI Database Project data (\"Data\") are provided by the National Renewable Energy Laboratory (\"NREL\"), operated by the Alliance for Sustainable Energy, LLC (\"Alliance\") for the US Department of Energy (\"DOE\") under Contract No. DE-AC36-08GO28308. The United States Government (the \"Government\") retains and the user acknowledges that the Government retains a non-exclusive, paid-up, irrevocable, worldwide license to publish or reproduce the published form of these data, or allow others to do so, for Government purposes.\nAccess to and use of these Data shall impose the following obligations on the user, as set forth in this Agreement. The user is granted the right, without any fee or cost, to use, copy, modify, alter, enhance and distribute these Data for any purpose whatsoever, provided that this entire notice appears in all copies of the Data. Any modification, alteration or enhancement of these data shall be identified and documented by the user. Further, the user agrees to credit the DOE/NREL/Alliance in any publication that results from the use of these Data. The names DOE/NREL/Alliance, however, may not be used in any advertising or publicity to endorse or promote any products or commercial entities unless specific written permission is obtained from DOE/NREL/Alliance. The user also understands that DOE/NREL/Alliance is not obligated to provide the user with any support, consulting, training or assistance of any kind with regard to the use of these Data or to provide the user with any updates, revisions or new versions of these Data.\nYOU AGREE TO INDEMNIFY THE GOVERNMENT AND DOE/NREL/ALLIANCE, AND ITS SUBSIDIARIES, AFFILIATES, OFFICERS, AGENTS, AND EMPLOYEES AGAINST ANY CLAIM OR DEMAND, INCLUDING REASONABLE ATTORNEYS' FEES, RELATED TO YOUR USE OF THESE DATA. THESE DATA ARE PROVIDED BY DOE/NREL/ALLIANCE \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE GOVERNMENT OR DOE/NREL/ALLIANCE BE LIABLE FOR ANY SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER, INCLUDING BUT NOT LIMITED TO CLAIMS ASSOCIATED WITH THE LOSS OF DATA OR PROFITS, WHICH MAY RESULT FROM AN ACTION IN CONTRACT, NEGLIGENCE OR OTHER TORTIOUS CLAIM THAT ARISES OUT OF OR IN CONNECTION WITH THE ACCESS, USE OR PERFORMANCE OF THESE DATA.",
+    "samplingDescription": "No uncertainty was assessed.",
+    "technologyDescription": "Technosphere mixer only: weighted providers of balancing-authority resource processes. No elementary flows.",
+    "timeDescription": "This process represents the grid mix of the year modeled in the U.S. Electricity Baseline.",
+    "useAdvice": "Use as an estimated US-average fuel-resource provider where regional data are unknown. Emissions and other elementary flows come from the linked balancing-authority resource processes, not from this mixer.",
+    "validFrom": "2023-01-01T00:00:00",
+    "validUntil": "2023-12-31T00:00:00"
+  },
+  "processType": "UNIT_PROCESS",
+  "socialAspects": [],
+  "version": "03.00.000"
+}

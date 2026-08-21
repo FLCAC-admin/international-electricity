@@ -4,7 +4,7 @@ Generating international electricity mixes for the [Federal LCA Commons](lcacomm
 
 Country mixes link Ember fuels to **US-average** resource processes. Build those first with [us_fuel_generation_mixes.py](us_fuel_generation_mixes.py) (BA-weighted averages from the US Electricity Baseline).
 
-Zips land in `output/`. Extracts: `output/us_fuel_generation_mixes/` and `output/international_electricity_v1.0.0/`.
+Zips land in `output/`. Extracts: `output/us_fuel_generation_mixes_v1.0/` and `output/international_electricity_v1.0.0/`.
 
 Each country (except USA) then gets two processes in the same international zip:
 

@@ -183,7 +183,8 @@ user_meta_base['dq_entry'] = format_dqi_score(meta['DQI']['Process'])
 # generate dictionary of location objects
 location_objs = build_location_dict(df_olca, locations)
 for loc in location_objs.values():
-    loc.category = "Locations/Country"
+    # openLCA already roots locations under a Locations folder; use Country only.
+    loc.category = "Country"
 
 #%% Create json file
 from flcac_utils.generate_processes import build_flow_dict, \

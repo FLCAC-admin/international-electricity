@@ -1,0 +1,197 @@
+{
+  "@type": "Process",
+  "@id": "f06e1b22-0095-31b8-b527-3090b8028515",
+  "allocationFactors": [],
+  "category": "22: Utilities/2211: Electric Power Generation, Transmission and Distribution/SOLARTHERMAL",
+  "description": "US-average resource process represented as a balancing-authority provider mix. Each input exchange links to a BA resource process and uses a normalized weight back-calculated from the process 'Electricity; at grid; consumption mix - US - US'.",
+  "dqEntry": "(2;4)",
+  "dqSystem": {
+    "@type": "DQSystem",
+    "@id": "70bf370f-9912-4ec1-baa3-fbd4eaf85a10",
+    "name": "US EPA - Process Pedigree Matrix"
+  },
+  "exchangeDqSystem": {
+    "@type": "DQSystem",
+    "@id": "d13b2bc4-5e84-4cc8-a6be-9101ebb252ff",
+    "name": "US EPA - Flow Pedigree Matrix"
+  },
+  "exchanges": [
+    {
+      "amount": 1.0,
+      "description": "",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 1,
+      "isAvoidedProduct": false,
+      "isInput": false,
+      "isQuantitativeReference": true,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.4845481804935559,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "dc3bf457-f281-3acf-a55c-9f4144ab207b",
+        "name": "Electricity - SOLARTHERMAL - Arizona Public Service Company"
+      },
+      "description": "Arizona Public Service Company",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 2,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.47145584953413083,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "61b90600-9d0a-33bf-92a7-d2573e248722",
+        "name": "Electricity - SOLARTHERMAL - California Independent System Operator"
+      },
+      "description": "California Independent System Operator",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 3,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.04399596997231331,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "03a48208-dfdf-37cf-bd51-6de0373c99fb",
+        "name": "Electricity - SOLARTHERMAL - Nevada Power Company"
+      },
+      "description": "Nevada Power Company",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 4,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    }
+  ],
+  "isInfrastructureProcess": false,
+  "lastChange": "2026-08-21T16:16:34.981Z",
+  "lastInternalId": 4,
+  "location": {
+    "@type": "Location",
+    "@id": "0b3b97fa-6688-3c56-88ee-4ae80ec0c3c2",
+    "category": "Country",
+    "name": "United States of America (the)"
+  },
+  "name": "Electricity - SOLARTHERMAL - US average",
+  "parameters": [],
+  "processDocumentation": {
+    "completenessDescription": "This process contains no elementary flows. Provider weights sum to 1.",
+    "creationDate": "2026-08-21T12:00:00",
+    "dataCollectionDescription": "Not applicable.",
+    "dataDocumentor": {
+      "@type": "Actor",
+      "@id": "38e67478-a915-43d9-ad67-e25db79a4acc",
+      "category": "Organisations",
+      "name": "ERG"
+    },
+    "dataGenerator": {
+      "@type": "Actor",
+      "@id": "38e67478-a915-43d9-ad67-e25db79a4acc",
+      "category": "Organisations",
+      "name": "ERG"
+    },
+    "dataSelectionDescription": "Balancing-authority resource shares are taken from the US Electricity Baseline process 'Electricity; at grid; consumption mix - US - US'.",
+    "dataTreatmentDescription": "BA contributions are normalized within each resource to form a US-average provider mix.",
+    "geographyDescription": "This process represents a US-average mix of balancing-authority resource processes for one fuel.",
+    "intendedApplication": "US-average fuel-resource mixer for use with the U.S. Electricity Baseline.",
+    "inventoryMethodDescription": "Not applicable; this process contains only technosphere flows.",
+    "modelingConstantsDescription": "Provider weights are contribution = US_BA_weight \u00d7 BA_resource_fraction, normalized within the resource so BA providers sum to 1.",
+    "projectDescription": "This dataset was developed by the Federal LCA Commons Data Curator Eastern Research Group, Inc. (ERG) under subcontract (SUB-2024-10066) to the National Renewable Energy Laboratory under Department of Energy (DOE) Prime Contract No. DE-AC36-08GO28308. The work is funded by DOE's Advanced Materials & Manufacturing Technologies Office (AMMTO).",
+    "publication": {
+      "@type": "Source",
+      "@id": "3da34d38-4230-3751-9ed6-327a8bf70a0c",
+      "name": "ERG, International Electricity"
+    },
+    "restrictionsDescription": "These U.S. LCI Database Project data (\"Data\") are provided by the National Renewable Energy Laboratory (\"NREL\"), operated by the Alliance for Sustainable Energy, LLC (\"Alliance\") for the US Department of Energy (\"DOE\") under Contract No. DE-AC36-08GO28308. The United States Government (the \"Government\") retains and the user acknowledges that the Government retains a non-exclusive, paid-up, irrevocable, worldwide license to publish or reproduce the published form of these data, or allow others to do so, for Government purposes.\nAccess to and use of these Data shall impose the following obligations on the user, as set forth in this Agreement. The user is granted the right, without any fee or cost, to use, copy, modify, alter, enhance and distribute these Data for any purpose whatsoever, provided that this entire notice appears in all copies of the Data. Any modification, alteration or enhancement of these data shall be identified and documented by the user. Further, the user agrees to credit the DOE/NREL/Alliance in any publication that results from the use of these Data. The names DOE/NREL/Alliance, however, may not be used in any advertising or publicity to endorse or promote any products or commercial entities unless specific written permission is obtained from DOE/NREL/Alliance. The user also understands that DOE/NREL/Alliance is not obligated to provide the user with any support, consulting, training or assistance of any kind with regard to the use of these Data or to provide the user with any updates, revisions or new versions of these Data.\nYOU AGREE TO INDEMNIFY THE GOVERNMENT AND DOE/NREL/ALLIANCE, AND ITS SUBSIDIARIES, AFFILIATES, OFFICERS, AGENTS, AND EMPLOYEES AGAINST ANY CLAIM OR DEMAND, INCLUDING REASONABLE ATTORNEYS' FEES, RELATED TO YOUR USE OF THESE DATA. THESE DATA ARE PROVIDED BY DOE/NREL/ALLIANCE \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE GOVERNMENT OR DOE/NREL/ALLIANCE BE LIABLE FOR ANY SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER, INCLUDING BUT NOT LIMITED TO CLAIMS ASSOCIATED WITH THE LOSS OF DATA OR PROFITS, WHICH MAY RESULT FROM AN ACTION IN CONTRACT, NEGLIGENCE OR OTHER TORTIOUS CLAIM THAT ARISES OUT OF OR IN CONNECTION WITH THE ACCESS, USE OR PERFORMANCE OF THESE DATA.",
+    "samplingDescription": "No uncertainty was assessed.",
+    "technologyDescription": "Technosphere mixer only: weighted providers of balancing-authority resource processes. No elementary flows.",
+    "timeDescription": "This process represents the grid mix of the year modeled in the U.S. Electricity Baseline.",
+    "useAdvice": "Use as an estimated US-average fuel-resource provider where regional data are unknown. Emissions and other elementary flows come from the linked balancing-authority resource processes, not from this mixer.",
+    "validFrom": "2023-01-01T00:00:00",
+    "validUntil": "2023-12-31T00:00:00"
+  },
+  "processType": "UNIT_PROCESS",
+  "socialAspects": [],
+  "version": "03.00.000"
+}

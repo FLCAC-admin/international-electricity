@@ -1,0 +1,1154 @@
+{
+  "@type": "Process",
+  "@id": "4029ad81-1155-340d-9f54-7115492e2617",
+  "allocationFactors": [],
+  "category": "22: Utilities/2211: Electric Power Generation, Transmission and Distribution/BIOMASS",
+  "description": "US-average resource process represented as a balancing-authority provider mix. Each input exchange links to a BA resource process and uses a normalized weight back-calculated from the process 'Electricity; at grid; consumption mix - US - US'.",
+  "dqEntry": "(2;4)",
+  "dqSystem": {
+    "@type": "DQSystem",
+    "@id": "70bf370f-9912-4ec1-baa3-fbd4eaf85a10",
+    "name": "US EPA - Process Pedigree Matrix"
+  },
+  "exchangeDqSystem": {
+    "@type": "DQSystem",
+    "@id": "d13b2bc4-5e84-4cc8-a6be-9101ebb252ff",
+    "name": "US EPA - Flow Pedigree Matrix"
+  },
+  "exchanges": [
+    {
+      "amount": 1.0,
+      "description": "",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 1,
+      "isAvoidedProduct": false,
+      "isInput": false,
+      "isQuantitativeReference": true,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.16269364547592455,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "b0b00af7-0e43-314f-bafc-cb188652d097",
+        "name": "Electricity - BIOMASS - California Independent System Operator"
+      },
+      "description": "California Independent System Operator",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 2,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.1612562561330421,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "23479873-da1a-3370-b4cf-a7df555e06d2",
+        "name": "Electricity - BIOMASS - PJM Interconnection, LLC"
+      },
+      "description": "PJM Interconnection, LLC",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 3,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.140933337127906,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "f256d3d0-7229-34c2-b749-313cf93f6bc2",
+        "name": "Electricity - BIOMASS - ISO New England"
+      },
+      "description": "ISO New England",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 4,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.12897933812958756,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "af6f2d7d-02d7-3d13-8f1a-06f47afd808d",
+        "name": "Electricity - BIOMASS - Midcontinent Independent System Operator, Inc."
+      },
+      "description": "Midcontinent Independent System Operator, Inc.",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 5,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.08430044119677034,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "4a0629b8-569d-30f1-81e6-da2a6cc7bbff",
+        "name": "Electricity - BIOMASS - Southern Company Services, Inc. - Trans"
+      },
+      "description": "Southern Company Services, Inc. - Trans",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 6,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.0437986074029409,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "c3b39e0e-e3c0-3acc-b1e3-0616a776945b",
+        "name": "Electricity - BIOMASS - New York Independent System Operator"
+      },
+      "description": "New York Independent System Operator",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 7,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.037126065066470176,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "2778aea2-d3f8-36ef-a84d-3e20cee92bdc",
+        "name": "Electricity - BIOMASS - Avista Corporation"
+      },
+      "description": "Avista Corporation",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 8,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.035037621048197076,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "dbe82b32-2144-3370-92b2-1fbc4d183b68",
+        "name": "Electricity - BIOMASS - PacifiCorp West"
+      },
+      "description": "PacifiCorp West",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 9,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.033908859181179404,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "5e6faf27-fddf-3a38-92f8-34dc95e4f268",
+        "name": "Electricity - BIOMASS - Arizona Public Service Company"
+      },
+      "description": "Arizona Public Service Company",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 10,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.02925594534856109,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "d7159c93-0cea-3c91-872c-ce3f38dfaf82",
+        "name": "Electricity - BIOMASS - South Carolina Public Service Authority"
+      },
+      "description": "South Carolina Public Service Authority",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 11,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.025690279064439686,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "3b1c5127-d0e9-3b8c-9465-7356f31dbb94",
+        "name": "Electricity - BIOMASS - Gainesville Regional Utilities"
+      },
+      "description": "Gainesville Regional Utilities",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 12,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.024185869813166352,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "47ce27c3-90d3-324e-9462-d27042ce2f5a",
+        "name": "Electricity - BIOMASS - Electric Reliability Council of Texas, Inc."
+      },
+      "description": "Electric Reliability Council of Texas, Inc.",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 13,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.012474838659731842,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "9705519a-acdb-3569-b905-3ca903379852",
+        "name": "Electricity - BIOMASS - Bonneville Power Administration"
+      },
+      "description": "Bonneville Power Administration",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 14,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.011577842544007854,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "5805c35a-4083-3263-b2f8-62d696587c40",
+        "name": "Electricity - BIOMASS - Imperial Irrigation District"
+      },
+      "description": "Imperial Irrigation District",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 15,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.010551918900688184,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "92dca37a-887d-3ef4-9415-a54ff715605c",
+        "name": "Electricity - BIOMASS - Duke Energy Carolinas"
+      },
+      "description": "Duke Energy Carolinas",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 16,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.008546417501009143,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "0c580208-20ef-3985-b3dd-9bcbba3f2e7c",
+        "name": "Electricity - BIOMASS - Florida Power & Light Co."
+      },
+      "description": "Florida Power & Light Co.",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 17,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.007860692260436038,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "f7e1b7f9-f2f6-345d-84d0-b2a7e361b44b",
+        "name": "Electricity - BIOMASS - Duke Energy Progress East"
+      },
+      "description": "Duke Energy Progress East",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 18,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.007518763163877179,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "3efbff87-1f59-3f16-b854-33e597eeda12",
+        "name": "Electricity - BIOMASS - Southwest Power Pool"
+      },
+      "description": "Southwest Power Pool",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 19,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.005537658634896654,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "76e67f87-f457-3324-af0a-f50692ee461d",
+        "name": "Electricity - BIOMASS - Public Service Company of Colorado"
+      },
+      "description": "Public Service Company of Colorado",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 20,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.004897202694838622,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "47c496ef-5dfa-36db-aeba-120d0967da45",
+        "name": "Electricity - BIOMASS - Tennessee Valley Authority"
+      },
+      "description": "Tennessee Valley Authority",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 21,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.0038190563623149115,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "0f3279ed-d33e-32ff-8584-75495202437e",
+        "name": "Electricity - BIOMASS - Nevada Power Company"
+      },
+      "description": "Nevada Power Company",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 22,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.003738422661144907,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "2e568e70-09aa-3375-b6ff-ab3f9b94710e",
+        "name": "Electricity - BIOMASS - PacifiCorp East"
+      },
+      "description": "PacifiCorp East",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 23,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.00368708273995357,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "e8a5c206-277a-37c1-ab90-38122395f827",
+        "name": "Electricity - BIOMASS - Puget Sound Energy, Inc."
+      },
+      "description": "Puget Sound Energy, Inc.",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 24,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.0035934839172393884,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "11e19306-f965-3911-9e07-a598e186be84",
+        "name": "Electricity - BIOMASS - Duke Energy Florida, Inc."
+      },
+      "description": "Duke Energy Florida, Inc.",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 25,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.0029169007244294084,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "fd7e10b3-0be0-3dbf-a09d-09d6691bb8eb",
+        "name": "Electricity - BIOMASS - Idaho Power Company"
+      },
+      "description": "Idaho Power Company",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 26,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.002047727033148738,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "fd3ebd28-bb50-3c52-9f67-82c4888e056e",
+        "name": "Electricity - BIOMASS - JEA"
+      },
+      "description": "JEA",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 27,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.001351892236695709,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "e76ff5c2-dfd4-358d-8fc7-3ec8e767fd27",
+        "name": "Electricity - BIOMASS - El Paso Electric Company"
+      },
+      "description": "El Paso Electric Company",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 28,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.0008586829134779388,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "9b088524-e71d-34ed-9496-8cf51a04e178",
+        "name": "Electricity - BIOMASS - Associated Electric Cooperative, Inc."
+      },
+      "description": "Associated Electric Cooperative, Inc.",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 29,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.0006344643718128986,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "d9f0438f-8af0-3756-8b93-0c7136a4fe4a",
+        "name": "Electricity - BIOMASS - Western Area Power Administration - Rocky Mountain Region"
+      },
+      "description": "Western Area Power Administration - Rocky Mountain Region",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 30,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.0005786956036673028,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "568e9061-3184-3d1c-a34f-81b8619ca40f",
+        "name": "Electricity - BIOMASS - Los Angeles Department of Water and Power"
+      },
+      "description": "Los Angeles Department of Water and Power",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 31,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.0005411896366103774,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "7c1db744-b75e-3b56-a457-689b8f698ced",
+        "name": "Electricity - BIOMASS - Seminole Electric Cooperative"
+      },
+      "description": "Seminole Electric Cooperative",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 32,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    },
+    {
+      "amount": 0.00010080245183420028,
+      "defaultProvider": {
+        "@type": "Process",
+        "@id": "c1027216-0ed2-3217-9067-16a08692e093",
+        "name": "Electricity - BIOMASS - Louisville Gas and Electric Company and Kentucky Utilities Company"
+      },
+      "description": "Louisville Gas and Electric Company and Kentucky Utilities Company",
+      "flow": {
+        "@type": "Flow",
+        "@id": "fc406690-160c-37d5-bf36-added9542164",
+        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+        "flowType": "PRODUCT_FLOW",
+        "name": "Electricity, AC, 2300-7650 V",
+        "refUnit": "MJ"
+      },
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "internalId": 33,
+      "isAvoidedProduct": false,
+      "isInput": true,
+      "isQuantitativeReference": false,
+      "unit": {
+        "@type": "Unit",
+        "@id": "92e3bd49-8ed5-4885-9db6-fc88c7afcfcb",
+        "name": "MWh"
+      }
+    }
+  ],
+  "isInfrastructureProcess": false,
+  "lastChange": "2026-08-21T16:16:34.912Z",
+  "lastInternalId": 33,
+  "location": {
+    "@type": "Location",
+    "@id": "0b3b97fa-6688-3c56-88ee-4ae80ec0c3c2",
+    "category": "Country",
+    "name": "United States of America (the)"
+  },
+  "name": "Electricity - BIOMASS - US average",
+  "parameters": [],
+  "processDocumentation": {
+    "completenessDescription": "This process contains no elementary flows. Provider weights sum to 1.",
+    "creationDate": "2026-08-21T12:00:00",
+    "dataCollectionDescription": "Not applicable.",
+    "dataDocumentor": {
+      "@type": "Actor",
+      "@id": "38e67478-a915-43d9-ad67-e25db79a4acc",
+      "category": "Organisations",
+      "name": "ERG"
+    },
+    "dataGenerator": {
+      "@type": "Actor",
+      "@id": "38e67478-a915-43d9-ad67-e25db79a4acc",
+      "category": "Organisations",
+      "name": "ERG"
+    },
+    "dataSelectionDescription": "Balancing-authority resource shares are taken from the US Electricity Baseline process 'Electricity; at grid; consumption mix - US - US'.",
+    "dataTreatmentDescription": "BA contributions are normalized within each resource to form a US-average provider mix.",
+    "geographyDescription": "This process represents a US-average mix of balancing-authority resource processes for one fuel.",
+    "intendedApplication": "US-average fuel-resource mixer for use with the U.S. Electricity Baseline.",
+    "inventoryMethodDescription": "Not applicable; this process contains only technosphere flows.",
+    "modelingConstantsDescription": "Provider weights are contribution = US_BA_weight \u00d7 BA_resource_fraction, normalized within the resource so BA providers sum to 1.",
+    "projectDescription": "This dataset was developed by the Federal LCA Commons Data Curator Eastern Research Group, Inc. (ERG) under subcontract (SUB-2024-10066) to the National Renewable Energy Laboratory under Department of Energy (DOE) Prime Contract No. DE-AC36-08GO28308. The work is funded by DOE's Advanced Materials & Manufacturing Technologies Office (AMMTO).",
+    "publication": {
+      "@type": "Source",
+      "@id": "3da34d38-4230-3751-9ed6-327a8bf70a0c",
+      "name": "ERG, International Electricity"
+    },
+    "restrictionsDescription": "These U.S. LCI Database Project data (\"Data\") are provided by the National Renewable Energy Laboratory (\"NREL\"), operated by the Alliance for Sustainable Energy, LLC (\"Alliance\") for the US Department of Energy (\"DOE\") under Contract No. DE-AC36-08GO28308. The United States Government (the \"Government\") retains and the user acknowledges that the Government retains a non-exclusive, paid-up, irrevocable, worldwide license to publish or reproduce the published form of these data, or allow others to do so, for Government purposes.\nAccess to and use of these Data shall impose the following obligations on the user, as set forth in this Agreement. The user is granted the right, without any fee or cost, to use, copy, modify, alter, enhance and distribute these Data for any purpose whatsoever, provided that this entire notice appears in all copies of the Data. Any modification, alteration or enhancement of these data shall be identified and documented by the user. Further, the user agrees to credit the DOE/NREL/Alliance in any publication that results from the use of these Data. The names DOE/NREL/Alliance, however, may not be used in any advertising or publicity to endorse or promote any products or commercial entities unless specific written permission is obtained from DOE/NREL/Alliance. The user also understands that DOE/NREL/Alliance is not obligated to provide the user with any support, consulting, training or assistance of any kind with regard to the use of these Data or to provide the user with any updates, revisions or new versions of these Data.\nYOU AGREE TO INDEMNIFY THE GOVERNMENT AND DOE/NREL/ALLIANCE, AND ITS SUBSIDIARIES, AFFILIATES, OFFICERS, AGENTS, AND EMPLOYEES AGAINST ANY CLAIM OR DEMAND, INCLUDING REASONABLE ATTORNEYS' FEES, RELATED TO YOUR USE OF THESE DATA. THESE DATA ARE PROVIDED BY DOE/NREL/ALLIANCE \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE GOVERNMENT OR DOE/NREL/ALLIANCE BE LIABLE FOR ANY SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER, INCLUDING BUT NOT LIMITED TO CLAIMS ASSOCIATED WITH THE LOSS OF DATA OR PROFITS, WHICH MAY RESULT FROM AN ACTION IN CONTRACT, NEGLIGENCE OR OTHER TORTIOUS CLAIM THAT ARISES OUT OF OR IN CONNECTION WITH THE ACCESS, USE OR PERFORMANCE OF THESE DATA.",
+    "samplingDescription": "No uncertainty was assessed.",
+    "technologyDescription": "Technosphere mixer only: weighted providers of balancing-authority resource processes. No elementary flows.",
+    "timeDescription": "This process represents the grid mix of the year modeled in the U.S. Electricity Baseline.",
+    "useAdvice": "Use as an estimated US-average fuel-resource provider where regional data are unknown. Emissions and other elementary flows come from the linked balancing-authority resource processes, not from this mixer.",
+    "validFrom": "2023-01-01T00:00:00",
+    "validUntil": "2023-12-31T00:00:00"
+  },
+  "processType": "UNIT_PROCESS",
+  "socialAspects": [],
+  "version": "03.00.000"
+}

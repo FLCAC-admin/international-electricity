@@ -21,7 +21,7 @@ Inputs
 
 Outputs
 - zip: ``output/us_fuel_generation_mixes_olca2.0_*.zip`` (same folder as international)
-- extract + audit CSVs: ``output/us_fuel_generation_mixes/``
+- extract + audit CSVs: ``output/us_fuel_generation_mixes_v1.0/``
 """
 
 from __future__ import annotations
@@ -35,27 +35,50 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 import olca_schema as olca
+import yaml
 from esupy.util import make_uuid
 from flcac_utils.commons_api import read_commons_data
-from flcac_utils.generate_processes import write_objects
-from flcac_utils.util import extract_latest_zip
+from flcac_utils.generate_processes import get_process_metadata, write_objects
+from flcac_utils.util import (
+    assign_year_to_meta,
+    extract_actors_from_process_meta,
+    extract_latest_zip,
+    extract_sources_from_process_meta,
+)
 
 BASE_DIR = Path(__file__).resolve().parent
+DATA_DIR = BASE_DIR / "data"
 ZIP_DIR = BASE_DIR / "output"
-EXTRACT_DIR = BASE_DIR / "output" / "us_fuel_generation_mixes"
+EXTRACT_DIR = BASE_DIR / "output" / "us_fuel_generation_mixes_v1.0"
 
 BASELINE_REPO_KEY = "US Electricity Baseline"
 US_GRID_CONSUMPTION_MIX_NAME = "Electricity; at grid; consumption mix - US - US"
 GRID_GENERATION_MIX_PREFIX = "Electricity; at grid; generation mix - "
 RESOURCE_PROCESS_PATTERN = re.compile(r"^Electricity - ([^-]+?) - (.+)$")
 REFERENCE_ELECTRICITY_FLOW_ID = "fc406690-160c-37d5-bf36-added9542164"
-PROCESS_CATEGORY = (
-    "22: Utilities / 2211: Electric Power Generation, Transmission and Distribution / International"
+# Match US Electricity Baseline resource folders (e.g. .../SOLAR, .../COAL).
+RESOURCE_CATEGORY_PREFIX = (
+    "22: Utilities/2211: Electric Power Generation, Transmission and Distribution"
 )
+# Matches US Electricity Baseline US grid consumption mix valid year.
+MIX_YEAR = 2023
 
 # Skip synthetic mixes by default. Keep OTHF and MIXED because they are
 # represented as explicit resource categories in the baseline package.
 SKIP_RESOURCES = {"ALL"}
+
+
+def _load_us_average_meta():
+    """Load UsAverage process metadata from YAML (same pattern as AtGrid/AtUser)."""
+    with open(DATA_DIR / "electricity_process_metadata.yaml", encoding="utf-8") as f:
+        meta_docs = yaml.safe_load(f)
+    meta = meta_docs["UsAverage"]
+    meta, source_objs = extract_sources_from_process_meta(
+        meta, bib_path=DATA_DIR / "electricity.bib"
+    )
+    meta, actor_objs = extract_actors_from_process_meta(meta)
+    assign_year_to_meta(meta, MIX_YEAR)
+    return meta, source_objs, actor_objs
 
 
 def _load_processes_from_commons(repo_key: str = BASELINE_REPO_KEY):
@@ -175,7 +198,15 @@ def _compute_resource_contributions(processes_by_id, us_ba_weights):
     return resource_contribs
 
 
-def _aggregate_resource_process(resource, contributors, processes_by_id, us_grid_mix_process):
+def _aggregate_resource_process(
+    resource,
+    contributors,
+    processes_by_id,
+    us_grid_mix_process,
+    us_meta,
+    actor_objs,
+    source_objs,
+):
     total_contribution = sum(c["contribution"] for c in contributors)
     if total_contribution <= 0.0:
         return None
@@ -185,30 +216,23 @@ def _aggregate_resource_process(resource, contributors, processes_by_id, us_grid
         w = item["contribution"] / total_contribution
         normalized.append((w, item))
 
-    # Base metadata from highest-weight contributor process.
+    # Structure from highest-weight contributor; YAML metadata replaces BA docs.
     normalized.sort(key=lambda x: x[0], reverse=True)
     base_process = processes_by_id[normalized[0][1]["process_id"]]
     aggregated_process = copy.deepcopy(base_process)
 
     aggregated_process["@id"] = make_uuid(f"Electricity - {resource} - US average")
     aggregated_process["name"] = f"Electricity - {resource} - US average"
-
-    old_description = str(aggregated_process.get("description", "")).strip()
-    method_note = (
-        "US-average resource process represented as a balancing-authority "
-        "provider mix. Each input exchange links to a BA resource process and "
-        "uses a normalized weight back-calculated from the process "
-        f"'{US_GRID_CONSUMPTION_MIX_NAME}'."
-    )
-    aggregated_process["description"] = f"{old_description}\n\n{method_note}".strip()
     aggregated_process["lastChange"] = (
         datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S.%f")[:-3] + "Z"
     )
+    aggregated_process.pop("processDocumentation", None)
+    aggregated_process.pop("description", None)
 
     if isinstance(us_grid_mix_process.get("location"), dict):
         aggregated_process["location"] = copy.deepcopy(us_grid_mix_process["location"])
 
-    aggregated_process["category"] = PROCESS_CATEGORY
+    aggregated_process["category"] = f"{RESOURCE_CATEGORY_PREFIX}/{resource}"
 
     reference_exchange = copy.deepcopy(_find_reference_exchange(base_process))
     reference_exchange["@id"] = make_uuid(
@@ -220,6 +244,7 @@ def _aggregate_resource_process(resource, contributors, processes_by_id, us_grid
     reference_exchange["isAvoidedProduct"] = False
     reference_exchange["isQuantitativeReference"] = True
     reference_exchange["internalId"] = 1
+    reference_exchange["description"] = ""
 
     aggregated_exchanges = [reference_exchange]
     for idx, (weight, item) in enumerate(normalized, start=2):
@@ -236,6 +261,7 @@ def _aggregate_resource_process(resource, contributors, processes_by_id, us_grid
         mix_exchange["isAvoidedProduct"] = False
         mix_exchange["isQuantitativeReference"] = False
         mix_exchange["internalId"] = idx
+        mix_exchange["description"] = item["ba_name"]
         mix_exchange["defaultProvider"] = {
             "@type": "Process",
             "@id": item["process_id"],
@@ -246,8 +272,15 @@ def _aggregate_resource_process(resource, contributors, processes_by_id, us_grid
     aggregated_process["exchanges"] = aggregated_exchanges
     aggregated_process["lastInternalId"] = len(aggregated_exchanges)
 
+    process = get_process_metadata(
+        olca.Process.from_dict(aggregated_process),
+        metadata=copy.deepcopy(us_meta),
+        source_objs=source_objs,
+        actor_objs=actor_objs,
+    )
+
     return {
-        "process": aggregated_process,
+        "process": process,
         "resource_share": total_contribution,
         "contributors": [
             {
@@ -310,18 +343,17 @@ def _write_audit_csvs(aggregated_results):
     return summary_path, detail_path
 
 
-def _write_olca_package(processes_for_package):
+def _write_olca_package(processes_for_package, source_objs, actor_objs):
     """Write JSON-LD zip via flcac-utils and extract with extract_latest_zip."""
     ZIP_DIR.mkdir(parents=True, exist_ok=True)
-    processes = {
-        str(process["@id"]): olca.Process.from_dict(process)
-        for process in processes_for_package
-    }
+    processes = {str(process.id): process for process in processes_for_package}
     write_objects(
         "us_fuel_generation_mixes",
         {},
         [],
         processes,
+        source_objs,
+        actor_objs,
         out_path=ZIP_DIR,
     )
     zip_path = max(
@@ -333,11 +365,12 @@ def _write_olca_package(processes_for_package):
     return extract_latest_zip(
         zip_path,
         BASE_DIR,
-        output_folder_name=Path("output") / "us_fuel_generation_mixes",
+        output_folder_name=Path("output") / "us_fuel_generation_mixes_v1.0",
     )
 
 
 def main():
+    us_meta, source_objs, actor_objs = _load_us_average_meta()
     processes_by_id, processes_by_name = _load_processes_from_commons()
     print(f"Loaded {len(processes_by_id)} processes from {BASELINE_REPO_KEY}")
 
@@ -355,6 +388,9 @@ def main():
             contributors=contributors,
             processes_by_id=processes_by_id,
             us_grid_mix_process=us_grid_mix,
+            us_meta=us_meta,
+            actor_objs=actor_objs,
+            source_objs=source_objs,
         )
         if aggregated is not None:
             aggregated_results[resource] = aggregated
@@ -363,7 +399,9 @@ def main():
         raise ValueError("No resource aggregates were generated.")
 
     package_dir = _write_olca_package(
-        [result["process"] for result in aggregated_results.values()]
+        [result["process"] for result in aggregated_results.values()],
+        source_objs,
+        actor_objs,
     )
     summary_path, detail_path = _write_audit_csvs(aggregated_results)
 
