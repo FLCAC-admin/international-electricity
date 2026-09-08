@@ -26,7 +26,7 @@ Run [us_fuel_generation_mixes.py](us_fuel_generation_mixes.py). Losses are commi
 
 ## Datasets
 
-| Datasts                                      | Version | flcac-utils | Release        |
-|----------------------------------------------|---------|-------------|----------------|
-
-<!--| International Electricity mixes (2022, 2023) | v1.0.0  | v0.1.0      | 2025 Q1, USLCI | -->
+| Datasets                                    | Version | flcac-utils | Release                       |
+|---------------------------------------------|---------|-------------|-------------------------------|
+| U.S. Average Mixes (2023)                   | v1.0.0  | v0.4.0      | 2026 Q3, Electricity Baseline |
+| International Electricity Mixes (2024-2025) | v1.0.0  | v0.4.0      | _not published on FLCAC_      |

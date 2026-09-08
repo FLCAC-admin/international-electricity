@@ -50,12 +50,6 @@ countries = (df[['Area', 'CountryCode', 'Year']]
              .drop_duplicates(subset=['Area', 'CountryCode'], keep='last')
              )
 
-# Write to markdown
-## TODO: note a few countries get dropped, maybe missing location objects?
-markdown_file = countries.sort_values(by='Area').to_markdown(index=False)
-with open(parent_path / "country_list.md", "w") as f:
-    f.write("# Country List\n\n" + markdown_file)
-
 # merge back in to keep only the latest set of data for each area
 df = df.merge(countries, how='inner')
 df = df.dropna(subset='share')
@@ -285,8 +279,28 @@ for _, c in grid_countries.iterrows():
     ]
     user_info[pname] = rec
 
-pd.DataFrame(audit_rows).to_csv(out_path / 'at_user_loss_audit.csv', index=False)
-print(pd.DataFrame(audit_rows).loss_source.value_counts().to_string())
+df_audit = pd.DataFrame(audit_rows)
+df_audit.to_csv(out_path / 'at_user_loss_audit.csv', index=False)
+print(df_audit.loss_source.value_counts().to_string())
+
+# Write to markdown, listing only countries that get an at-grid process and
+# noting whether the at-user T&D loss is country-specific or a regional proxy
+loss_basis = {'country': 'Country', 'region': 'Region: '}
+country_md = (df_audit
+              .assign(**{'At-user T&D loss': df_audit.apply(
+                  lambda r: 'Region: ' + r['loss_geo_name']
+                  if r['loss_source'] == 'region'
+                  else ('Country' if r['loss_source'] == 'country'
+                        else 'Not available; no at-user process'), axis=1)})
+              .rename(columns={'mix_year': 'Year'})
+              .filter(['Area', 'CountryCode', 'Year', 'At-user T&D loss'])
+              .sort_values(by='Area'))
+with open(parent_path / "country_list.md", "w", encoding="utf-8") as f:
+    f.write("# Country List\n\n"
+            f"{len(country_md)} countries with an at-grid generation mix. "
+            "'At-user T&D loss' shows the World Bank loss basis used for the "
+            "matching at-user process.\n\n"
+            + country_md.to_markdown(index=False))
 
 if user_rows:
     df_user = pd.DataFrame(user_rows)
