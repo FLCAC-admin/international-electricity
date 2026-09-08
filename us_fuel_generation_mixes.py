@@ -21,7 +21,7 @@ Inputs
 
 Outputs
 - zip: ``output/us_fuel_generation_mixes_olca2.0_*.zip`` (same folder as international)
-- extract + audit CSVs: ``output/us_fuel_generation_mixes_v1.0/``
+- extract + audit CSVs: ``output/us_fuel_generation_mixes_v1/``
 """
 
 from __future__ import annotations
@@ -49,7 +49,7 @@ from flcac_utils.util import (
 BASE_DIR = Path(__file__).resolve().parent
 DATA_DIR = BASE_DIR / "data"
 ZIP_DIR = BASE_DIR / "output"
-EXTRACT_DIR = BASE_DIR / "output" / "us_fuel_generation_mixes_v1.0"
+EXTRACT_DIR = BASE_DIR / "output" / "us_fuel_generation_mixes_v1"
 
 BASELINE_REPO_KEY = "US Electricity Baseline"
 US_GRID_CONSUMPTION_MIX_NAME = "Electricity; at grid; consumption mix - US - US"
@@ -365,7 +365,7 @@ def _write_olca_package(processes_for_package, source_objs, actor_objs):
     return extract_latest_zip(
         zip_path,
         BASE_DIR,
-        output_folder_name=Path("output") / "us_fuel_generation_mixes_v1.0",
+        output_folder_name=Path("output") / "us_fuel_generation_mixes_v1",
     )
 
 

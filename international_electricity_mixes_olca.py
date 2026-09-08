@@ -322,4 +322,4 @@ zip_path = max(out_path.glob('international_electricity_olca2.0_*.zip'),
                key=lambda p: p.stat().st_mtime)
 extract_latest_zip(zip_path,
                    parent_path,
-                   output_folder_name = Path('output') / 'international_electricity_v1.0.0')
+                   output_folder_name = Path('output') / 'international_electricity_v1')
