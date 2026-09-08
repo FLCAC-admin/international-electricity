@@ -168,6 +168,8 @@ with open(data_path / 'electricity_process_metadata.yaml') as f:
 
 grid_meta = meta_docs['AtGrid']
 user_meta_base = meta_docs['AtUser']
+# per-country text templates; keyed by loss_source ('country' or 'region')
+user_templates = user_meta_base.pop('templates')
 (grid_meta, source_objs) = extract_sources_from_process_meta(
     grid_meta, bib_path=data_path / 'electricity.bib')
 (user_meta_base, source_objs_u) = extract_sources_from_process_meta(
@@ -298,33 +300,11 @@ if user_rows:
         area, iso3, L = rec['Area'], rec['CountryCode'], rec['L']
         y_mix, y_loss = rec['mix_year'], rec['loss_year']
         meta_u = copy.deepcopy(user_meta_base)
-        if rec['loss_source'] == 'country':
-            meta_u['description'] = (
-                f"At-grid generation mix for {area} ({iso3}), year {y_mix}, "
-                f"grossed up by T&D loss EG.ELC.LOSS.ZS = {L:.4f} for this country, "
-                f"World Bank year {y_loss}. Reference flow is U.S. Electricity, AC, 120 V proxy.")
-            meta_u['geography_description'] = (
-                f"End use in {area}. T&D loss factor is for this country ({iso3}).")
-            advice_extra = ""
-        else:
-            meta_u['description'] = (
-                f"At-grid generation mix for {area} ({iso3}), year {y_mix}, "
-                f"grossed up by T&D loss EG.ELC.LOSS.ZS = {L:.4f} from World Bank "
-                f"geographic region {rec['loss_geo_name']} ({rec['loss_geo_code']}) "
-                f"used as fallback (no country loss <= {y_mix}). "
-                f"World Bank year {y_loss}. "
-                "Reference flow is U.S. Electricity, AC, 120 V proxy.")
-            meta_u['geography_description'] = (
-                f"End use in {area}. T&D loss factor is for World Bank region "
-                f"{rec['loss_geo_name']} ({rec['loss_geo_code']}), "
-                f"not {area} specifically.")
-            advice_extra = " Check description: loss factor is regional."
-        meta_u['time_description'] = (
-            f"Process year follows World Bank T&D loss year {y_loss}. "
-            f"Upstream at-grid mix year is {y_mix}.")
-        meta_u['use_advice'] = (
-            f"Use for end-use electricity demand in {area}. "
-            f"LV reference is a U.S. 120 V proxy.{advice_extra}")
+        fields = dict(area=area, iso3=iso3, mix_year=y_mix, loss=L,
+                      loss_year=y_loss, region_name=rec['loss_geo_name'],
+                      region_code=rec['loss_geo_code'])
+        for k, template in user_templates[rec['loss_source']].items():
+            meta_u[k] = template.rstrip().format(**fields)
         assign_year_to_meta(meta_u, int(y_loss))
         processes.update(build_process_dict(
             df_user[df_user.ProcessName == pname],
