@@ -17,5 +17,8 @@ __pycache__/
 # Dataset / build artifacts
 output/*.zip
 output/*/locations/
+output/us_fuel_generation_mixes_v1.0/*.csv
+output/at_user_loss_audit.csv
 data/yearly_full_release*.csv
 fuel_by_country.csv
+data/.archive/*

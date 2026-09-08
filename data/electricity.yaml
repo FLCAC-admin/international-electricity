@@ -11,49 +11,53 @@ Process:
   FlowContext: 'Technosphere Flows / 22: Utilities / 2211: Electric Power Generation, Transmission and Distribution'
   Unit: 'MJ'
   ProcessName: 'Electricity; at grid; generation mix - <location>'
-  ProcessCategory: '22: Utilities / 2211: Electric Power Generation, Transmission and Distribution'
+  ProcessCategory: '22: Utilities / 2211: Electric Power Generation, Transmission and Distribution / International'
 
-  # 'Electricity; at user; consumption mix - <location>'
-  # 'Electricity, AC, 120 V'
-  # '3bca3bc6-2443-3184-8976-72dc98d258f6'
+AtUser:
+  FlowName: 'Electricity, AC, 120 V'
+  FlowUUID: '3bca3bc6-2443-3184-8976-72dc98d258f6'
+  FlowContext: 'Technosphere Flows / 22: Utilities / 2211: Electric Power Generation, Transmission and Distribution'
+  Unit: 'MJ'
+  ProcessName: 'Electricity; at user; generation mix - <location>'
+  ProcessCategory: '22: Utilities / 2211: Electric Power Generation, Transmission and Distribution / International'
 
-## Ember fuel categories linked to eLCI processes
+## Ember fuel categories linked to US-average resource processes
 Fuel:
   Bioenergy:
-    ProcessName: 'Electricity - BIOMASS - US'
-    UUID: 'c76033d9-1ac2-3975-b8f3-cbaef8892e75'
+    ProcessName: 'Electricity - BIOMASS - US average'
+    UUID: '4029ad81-1155-340d-9f54-7115492e2617'
 
   Coal:
-    ProcessName: 'Electricity - COAL - US'
-    UUID: '1a4cda28-2d34-3c33-9f94-e2aa49b7fca5'
+    ProcessName: 'Electricity - COAL - US average'
+    UUID: '084fdfde-7744-3bf2-adab-4b9b789d6a44'
 
-  Gas: 
-    ProcessName: 'Electricity - GAS - US'
-    UUID: 'af0efb53-bbfe-3b45-9ad7-ecc9d6ddfd74'
+  Gas:
+    ProcessName: 'Electricity - GAS - US average'
+    UUID: '33ab0062-e228-39d8-bfd6-0d93ad61e301'
 
   Hydro:
-    ProcessName: 'Electricity - HYDRO - US'
-    UUID: '84976f72-00ef-34a0-aa4b-25e4d1b6d561'
+    ProcessName: 'Electricity - HYDRO - US average'
+    UUID: 'f5d99be9-a735-3c36-a7af-df5a51b2b3bd'
 
   Nuclear:
-    ProcessName: 'Electricity - NUCLEAR - US'
-    UUID: '31cf98ad-c9a3-3c32-ae20-1615683dfdc1'
+    ProcessName: 'Electricity - NUCLEAR - US average'
+    UUID: '811003d6-aea0-3e10-8c08-a5722c9a76d7'
 
   Other Fossil:
-    ProcessName: 'Electricity - OIL - US'
-    UUID: '675b255f-6eb1-3414-90a0-790c582cb622'
+    ProcessName: 'Electricity - OIL - US average'
+    UUID: '045d5669-c0c2-3f4b-9da8-3a2253bf6707'
 
   Solar:
-    ProcessName: 'Electricity - SOLAR - US'
-    UUID: '9d8ad430-506f-375c-8f9f-fd8c09de1760'
+    ProcessName: 'Electricity - SOLAR - US average'
+    UUID: 'd0e022e1-5d3e-3900-8205-d6b98f845d44'
 
   Wind:
-    ProcessName: 'Electricity - WIND - US'
-    UUID: 'ff34ff9f-78f1-350f-a289-fddaa0d3f6cb'
+    ProcessName: 'Electricity - WIND - US average'
+    UUID: '3d8c18aa-e72e-326f-a7a4-de0dadf1bdf2'
 
   Other Renewables:
-    ProcessName: 'Electricity - GEOTHERMAL - US'
-    UUID: '27637316-f001-3de6-808c-1955d718adcd'
+    ProcessName: 'Electricity - GEOTHERMAL - US average'
+    UUID: 'baa02ecc-28b1-3fcf-9771-ee0d08adb164'
 
 DQI:
   dqSystem:
