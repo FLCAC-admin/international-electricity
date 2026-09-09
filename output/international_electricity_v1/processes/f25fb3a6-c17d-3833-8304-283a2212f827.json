@@ -3,7 +3,7 @@
   "@id": "f25fb3a6-c17d-3833-8304-283a2212f827",
   "category": "22: Utilities / 2211: Electric Power Generation, Transmission and Distribution / International",
   "defaultAllocationMethod": "PHYSICAL_ALLOCATION",
-  "description": "Electricity generation mixes by country, as sourced from Ember Climate, are linked to U.S. based generators and supply chains. These data represent a generation mix and do not account for transmission loss to end users.",
+  "description": "Electricity generation mixes by country, as sourced from Ember Climate, are linked to U.S. based generators and supply chains from the U.S. Electricity Baseline. These data represent an at-grid generation mix and do not account for transmission loss to end users.",
   "dqEntry": "(4;1)",
   "dqSystem": {
     "@type": "DQSystem",
@@ -23,34 +23,6 @@
         "@id": "4029ad81-1155-340d-9f54-7115492e2617"
       },
       "description": "Bioenergy",
-      "dqEntry": "(2;1;4;1;1)",
-      "flow": {
-        "@type": "Flow",
-        "@id": "fc406690-160c-37d5-bf36-added9542164",
-        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
-        "name": "Electricity, AC, 2300-7650 V"
-      },
-      "flowProperty": {
-        "@type": "FlowProperty",
-        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
-        "name": "Energy"
-      },
-      "isAvoidedProduct": false,
-      "isInput": true,
-      "isQuantitativeReference": false,
-      "unit": {
-        "@type": "Unit",
-        "@id": "52765a6c-3896-43c2-b2f4-c679acf13efe",
-        "name": "MJ"
-      }
-    },
-    {
-      "amount": 0.0,
-      "defaultProvider": {
-        "@type": "Process",
-        "@id": "084fdfde-7744-3bf2-adab-4b9b789d6a44"
-      },
-      "description": "Coal",
       "dqEntry": "(2;1;4;1;1)",
       "flow": {
         "@type": "Flow",
@@ -129,68 +101,12 @@
       }
     },
     {
-      "amount": 0.0,
-      "defaultProvider": {
-        "@type": "Process",
-        "@id": "811003d6-aea0-3e10-8c08-a5722c9a76d7"
-      },
-      "description": "Nuclear",
-      "dqEntry": "(2;1;4;1;1)",
-      "flow": {
-        "@type": "Flow",
-        "@id": "fc406690-160c-37d5-bf36-added9542164",
-        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
-        "name": "Electricity, AC, 2300-7650 V"
-      },
-      "flowProperty": {
-        "@type": "FlowProperty",
-        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
-        "name": "Energy"
-      },
-      "isAvoidedProduct": false,
-      "isInput": true,
-      "isQuantitativeReference": false,
-      "unit": {
-        "@type": "Unit",
-        "@id": "52765a6c-3896-43c2-b2f4-c679acf13efe",
-        "name": "MJ"
-      }
-    },
-    {
       "amount": 0.043,
       "defaultProvider": {
         "@type": "Process",
         "@id": "045d5669-c0c2-3f4b-9da8-3a2253bf6707"
       },
       "description": "Other Fossil",
-      "dqEntry": "(2;1;4;2;1)",
-      "flow": {
-        "@type": "Flow",
-        "@id": "fc406690-160c-37d5-bf36-added9542164",
-        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
-        "name": "Electricity, AC, 2300-7650 V"
-      },
-      "flowProperty": {
-        "@type": "FlowProperty",
-        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
-        "name": "Energy"
-      },
-      "isAvoidedProduct": false,
-      "isInput": true,
-      "isQuantitativeReference": false,
-      "unit": {
-        "@type": "Unit",
-        "@id": "52765a6c-3896-43c2-b2f4-c679acf13efe",
-        "name": "MJ"
-      }
-    },
-    {
-      "amount": 0.0,
-      "defaultProvider": {
-        "@type": "Process",
-        "@id": "baa02ecc-28b1-3fcf-9771-ee0d08adb164"
-      },
-      "description": "Other Renewables",
       "dqEntry": "(2;1;4;2;1)",
       "flow": {
         "@type": "Flow",
@@ -241,34 +157,6 @@
       }
     },
     {
-      "amount": 0.0,
-      "defaultProvider": {
-        "@type": "Process",
-        "@id": "3d8c18aa-e72e-326f-a7a4-de0dadf1bdf2"
-      },
-      "description": "Wind",
-      "dqEntry": "(2;1;4;1;1)",
-      "flow": {
-        "@type": "Flow",
-        "@id": "fc406690-160c-37d5-bf36-added9542164",
-        "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
-        "name": "Electricity, AC, 2300-7650 V"
-      },
-      "flowProperty": {
-        "@type": "FlowProperty",
-        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
-        "name": "Energy"
-      },
-      "isAvoidedProduct": false,
-      "isInput": true,
-      "isQuantitativeReference": false,
-      "unit": {
-        "@type": "Unit",
-        "@id": "52765a6c-3896-43c2-b2f4-c679acf13efe",
-        "name": "MJ"
-      }
-    },
-    {
       "amount": 1.0,
       "description": "",
       "dqEntry": "",
@@ -293,7 +181,7 @@
       }
     }
   ],
-  "lastChange": "2026-09-08T12:00:00Z",
+  "lastChange": "2026-09-09T12:00:00Z",
   "location": {
     "@type": "Location",
     "@id": "73bb4387-b307-3739-aacb-9cd62ac4049c",
@@ -303,7 +191,7 @@
   "name": "Electricity; at grid; generation mix - Tanzania, the United Republic of",
   "processDocumentation": {
     "completenessDescription": "This process contains no elementary flows. Generation mix of all technologies sums to 100%.",
-    "creationDate": "2026-09-08T12:00:00",
+    "creationDate": "2026-09-09T12:00:00",
     "dataCollectionDescription": "Data from Ember Climate were accessed on August 7 2026.",
     "dataDocumentor": {
       "@type": "Actor",
@@ -320,8 +208,8 @@
     "dataSelectionDescription": "Data were retrieved for all available countries for the most recent data year.",
     "dataTreatmentDescription": "Generation by fuel subcategory were normalized to total generation for each country to generate resource shares.",
     "geographyDescription": "This process represents the generation mix of the entire region.",
-    "intendedApplication": "This process is intended for use with electricity flows from the U.S. Electricity Baseline as a country generation mix (at grid).",
-    "inventoryMethodDescription": "Not applicable; this process contains only technosphere flows.",
+    "intendedApplication": "This process is intended for use with electricity flows from the U.S. Electricity Baseline as a country generation mix (at grid). The background electricity processes incorporate a range of flows that are characterized in several impact categories.",
+    "inventoryMethodDescription": "Attributional LCI method",
     "modelingConstantsDescription": "Approaches to compile and estimate generation mixes for specific countries by Ember Climate are described in the linked Ember Climate Data Methodology source object.",
     "projectDescription": "This dataset was developed by the Federal LCA Commons Data Curator Eastern Research Group, Inc. (ERG) under subcontract (SUB-2024-10066) to the National Laboratory of the Rockies under Department of Energy (DOE) Prime Contract No. DE-AC36-08GO28308. The work is funded by DOE's Advanced Materials & Manufacturing Technologies Office (AMMTO).",
     "publication": {
@@ -332,7 +220,7 @@
     "restrictionsDescription": "The underlying Ember Climate data is released under a Creative Commons Attribution Licence.\nThese U.S. LCI Database Project data (\"Data\") are provided by the National Laboratory of the Rockies (\"NLR\"), operated by the Alliance for Sustainable Energy, LLC (\"Alliance\") for the US Department of Energy (\"DOE\") under Contract No. DE-AC36-08GO28308. The United States Government (the \"Government\") retains and the user acknowledges that the Government retains a non-exclusive, paid-up, irrevocable, worldwide license to publish or reproduce the published form of these data, or allow others to do so, for Government purposes.\nAccess to and use of these Data shall impose the following obligations on the user, as set forth in this Agreement. The user is granted the right, without any fee or cost, to use, copy, modify, alter, enhance and distribute these Data for any purpose whatsoever, provided that this entire notice appears in all copies of the Data. Any modification, alteration or enhancement of these data shall be identified and documented by the user. Further, the user agrees to credit the DOE/NLR/Alliance in any publication that results from the use of these Data. The names DOE/NLR/Alliance, however, may not be used in any advertising or publicity to endorse or promote any products or commercial entities unless specific written permission is obtained from DOE/NLR/Alliance. The user also understands that DOE/NLR/Alliance is not obligated to provide the user with any support, consulting, training or assistance of any kind with regard to the use of these Data or to provide the user with any updates, revisions or new versions of these Data.\nYOU AGREE TO INDEMNIFY THE GOVERNMENT AND DOE/NLR/ALLIANCE, AND ITS SUBSIDIARIES, AFFILIATES, OFFICERS, AGENTS, AND EMPLOYEES AGAINST ANY CLAIM OR DEMAND, INCLUDING REASONABLE ATTORNEYS' FEES, RELATED TO YOUR USE OF THESE DATA. THESE DATA ARE PROVIDED BY DOE/NLR/ALLIANCE \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE GOVERNMENT OR DOE/NLR/ALLIANCE BE LIABLE FOR ANY SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER, INCLUDING BUT NOT LIMITED TO CLAIMS ASSOCIATED WITH THE LOSS OF DATA OR PROFITS, WHICH MAY RESULT FROM AN ACTION IN CONTRACT, NEGLIGENCE OR OTHER TORTIOUS CLAIM THAT ARISES OUT OF OR IN CONNECTION WITH THE ACCESS, USE OR PERFORMANCE OF THESE DATA.",
     "reviews": [
       {
-        "details": "details of review performed go here\n",
+        "details": "Internal review of methods and metadata.\n",
         "reviewType": "Dependent internal review"
       }
     ],

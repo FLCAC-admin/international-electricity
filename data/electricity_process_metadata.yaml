@@ -13,8 +13,9 @@ Common:
 AtGrid:
   description: >
       Electricity generation mixes by country, as sourced from Ember Climate, are
-      linked to U.S. based generators and supply chains. These data represent a
-      generation mix and do not account for transmission loss to end users.
+      linked to U.S. based generators and supply chains from the U.S. Electricity Baseline.
+      These data represent an at-grid generation mix and do not account for transmission
+      loss to end users.
 
   time_description: >
       This process reflects the generation mix of the region over the course of
@@ -28,7 +29,7 @@ AtGrid:
       Electricity Baseline.
 
   inventory_method_description: >
-      Not applicable; this process contains only technosphere flows.
+      Attributional LCI method
 
   modeling_constants_description: >
       Approaches to compile and estimate generation mixes for specific countries
@@ -66,6 +67,8 @@ AtGrid:
   intended_application: >
       This process is intended for use with electricity flows from the U.S.
       Electricity Baseline as a country generation mix (at grid).
+      The background electricity processes incorporate a range of flows that are
+      characterized in several impact categories.
 
   data_generator:
       USLCI: 'ERG'
@@ -82,7 +85,7 @@ AtGrid:
       reviewers:
         - USLCI: 'ERG'
       details: >
-        details of review performed go here
+        Internal review of methods and metadata.
 
   restrictions_description: >
       The underlying Ember Climate data is released under a Creative Commons Attribution Licence.
@@ -100,24 +103,23 @@ AtUser:
   templates:
     country:
       description: >
-          At-grid generation mix for {area} ({iso3}), year {mix_year}, grossed up
-          by T&D loss as reported by the World Bank ({loss:.4f} for this country)
-          for {loss_year}. Reference flow is U.S. Electricity, AC, 120 V proxy.
+          At grid generation mix for {area} ({iso3}), year {mix_year}, with added
+          transmission and distribution (T&D) loss as reported by the World Bank
+          ({loss:.4f} for this country) for {loss_year}.
       geography_description: >
           End use in {area}. T&D loss factor is for this country ({iso3}).
       time_description: &at_user_time >
           Process year follows World Bank T&D loss year {loss_year}.
-          Upstream at-grid mix year is {mix_year}.
+          Upstream at grid mix year is {mix_year}.
       use_advice: >
           Use for end-use electricity demand in {area}.
           Low voltage reference is a U.S. 120 V proxy.
     region:
       description: >
-          At-grid generation mix for {area} ({iso3}), year {mix_year}, grossed up
-          by T&D loss as reported by the World Bank ({loss:.4f}) for geographic
-          region {region_name} ({region_code}) used as fallback due to lack of
-          country specific data for {loss_year}. Reference flow is U.S.
-          Electricity, AC, 120 V proxy.
+          At grid generation mix for {area} ({iso3}), year {mix_year}, with added
+          transmission and distribution (T&D) loss as reported by the World Bank
+          ({loss:.4f}) for geographic region {region_name} ({region_code}) used
+          as fallback due to lack of country specific data for {loss_year}.
       geography_description: >
           End use in {area}. T&D loss factor is for World Bank region
           {region_name} ({region_code}), not {area} specifically.
@@ -125,15 +127,14 @@ AtUser:
       use_advice: >
           Use for end-use electricity demand in {area}.
           Low voltage reference is a U.S. 120 V proxy.
-          Check description: loss factor is regional.
+          Loss factor is regional.
 
   technology_description: >
-      Applies T&D loss to the country at-grid generation mix. No additional
+      Applies T&D loss to the country at grid generation mix. No additional
       generation technology mapping.
 
   inventory_method_description: >
-      Technosphere only: 1 MJ low voltage out; high voltage in from the country at-grid process at
-      1 / (1 - L).
+      Attributional LCI method
 
   modeling_constants_description: >
       L is the World Bank indicator 'Electric power transmission and distribution
@@ -142,16 +143,15 @@ AtUser:
 
   completeness_description: >
       No elementary flows. Completeness of the generation mix is that of the
-      upstream at-grid process; this process only adds T&D losses.
+      upstream at grid process; this process only adds T&D losses.
 
   data_selection_description: >
-      Latest transmission and distribution loss year less than or equal to the
-      linked at-grid mix year. Geographic region fallback if no country series;
+      Latest T&D loss year less than or equal to the
+      linked at grid mix year. Geographic region fallback if no country series;
       omit if neither is available.
 
   data_treatment_description: >
-      Static loss factor applied as a gross-up. L = 0 is kept (amount = 1).
-      L >= 1 is rejected.
+      Static T&D loss factor applied.
 
   sampling_description: >
       No uncertainty was assessed.
@@ -169,7 +169,9 @@ AtUser:
 
   intended_application: >
       End-use (at user) electricity demand in the country, linked to the U.S.
-      Electricity Baseline via the country at-grid mix and a U.S. 120 V low voltage proxy.
+      Electricity Baseline via the country at grid mix.
+      The background electricity processes incorporate a range of flows that are
+      characterized in several impact categories.
 
   data_generator:
       USLCI: 'ERG'
@@ -186,7 +188,7 @@ AtUser:
       reviewers:
         - USLCI: 'ERG'
       details: >
-        details of review performed go here
+        Internal review of methods and metadata.
 
   restrictions_description: >
       The underlying World Bank indicator 'Electric power transmission and
