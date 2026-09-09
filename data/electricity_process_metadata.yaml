@@ -1,0 +1,272 @@
+## At-grid, at-user, and US-average mixers are independent.
+## Script loads AtGrid / AtUser / UsAverage separately; do not share scientific metadata.
+
+## Administrative text shared by every section; referenced below as an alias.
+Common:
+  project_description: &project_description >
+      This dataset was developed by the Federal LCA Commons Data Curator Eastern
+      Research Group, Inc. (ERG) under subcontract (SUB-2024-10066) to the National
+      Laboratory of the Rockies under Department of Energy (DOE) Prime Contract
+      No. DE-AC36-08GO28308. The work is funded by DOE's Advanced Materials &
+      Manufacturing Technologies Office (AMMTO).
+
+AtGrid:
+  description: >
+      Electricity generation mixes by country, as sourced from Ember Climate, are
+      linked to U.S. based generators and supply chains from the U.S. Electricity Baseline.
+      These data represent an at-grid generation mix and do not account for transmission
+      loss to end users.
+
+  time_description: >
+      This process reflects the generation mix of the region over the course of
+      the entire year. It reflects the most recently available full year.
+
+  geography_description: >
+      This process represents the generation mix of the entire region.
+
+  technology_description: >
+      Generation technologies were mapped to those available in the U.S.
+      Electricity Baseline.
+
+  inventory_method_description: >
+      Attributional LCI method
+
+  modeling_constants_description: >
+      Approaches to compile and estimate generation mixes for specific countries
+      by Ember Climate are described in the linked Ember Climate Data Methodology
+      source object.
+
+  completeness_description: >
+      This process contains no elementary flows. Generation mix of all technologies
+      sums to 100%.
+
+  data_selection_description: >
+      Data were retrieved for all available countries for the most recent data year.
+
+  data_treatment_description: >
+      Generation by fuel subcategory were normalized to total generation for each
+      country to generate resource shares.
+
+  sampling_description: >
+      No uncertainty was assessed.
+
+  data_collection_description: >
+      Data from Ember Climate were accessed on August 7 2026.
+
+  use_advice: >
+      This process is intended to connect to electricity generation processes from
+      the electricity baseline. It does not include transmission and distribution
+      losses to end users; use the corresponding at-user process for that.
+
+  sources:
+   - ember_climate_yearly_2025: Ember Climate Yearly Electricity Data
+   - ember_climate_data_2022: Ember Climate Data Methodology
+
+  project_description: *project_description
+
+  intended_application: >
+      This process is intended for use with electricity flows from the U.S.
+      Electricity Baseline as a country generation mix (at grid).
+      The background electricity processes incorporate a range of flows that are
+      characterized in several impact categories.
+
+  data_generator:
+      USLCI: 'ERG'
+
+  data_documentor:
+      USLCI: 'ERG'
+
+  publication:
+      flcac_international_electricity: 'ERG, International Electricity'
+
+  reviews:
+    1:
+      reviewType: 'Dependent internal review'
+      reviewers:
+        - USLCI: 'ERG'
+      details: >
+        Internal review of methods and metadata.
+
+  restrictions_description: >
+      The underlying Ember Climate data is released under a Creative Commons Attribution Licence.
+
+      These U.S. LCI Database Project data ("Data") are provided by the National Laboratory of the Rockies ("NLR"), operated by the Alliance for Sustainable Energy, LLC ("Alliance") for the US Department of Energy ("DOE") under Contract No. DE-AC36-08GO28308. The United States Government (the "Government") retains and the user acknowledges that the Government retains a non-exclusive, paid-up, irrevocable, worldwide license to publish or reproduce the published form of these data, or allow others to do so, for Government purposes.
+
+      Access to and use of these Data shall impose the following obligations on the user, as set forth in this Agreement. The user is granted the right, without any fee or cost, to use, copy, modify, alter, enhance and distribute these Data for any purpose whatsoever, provided that this entire notice appears in all copies of the Data. Any modification, alteration or enhancement of these data shall be identified and documented by the user. Further, the user agrees to credit the DOE/NLR/Alliance in any publication that results from the use of these Data. The names DOE/NLR/Alliance, however, may not be used in any advertising or publicity to endorse or promote any products or commercial entities unless specific written permission is obtained from DOE/NLR/Alliance. The user also understands that DOE/NLR/Alliance is not obligated to provide the user with any support, consulting, training or assistance of any kind with regard to the use of these Data or to provide the user with any updates, revisions or new versions of these Data.
+
+      YOU AGREE TO INDEMNIFY THE GOVERNMENT AND DOE/NLR/ALLIANCE, AND ITS SUBSIDIARIES, AFFILIATES, OFFICERS, AGENTS, AND EMPLOYEES AGAINST ANY CLAIM OR DEMAND, INCLUDING REASONABLE ATTORNEYS' FEES, RELATED TO YOUR USE OF THESE DATA. THESE DATA ARE PROVIDED BY DOE/NLR/ALLIANCE "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE GOVERNMENT OR DOE/NLR/ALLIANCE BE LIABLE FOR ANY SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER, INCLUDING BUT NOT LIMITED TO CLAIMS ASSOCIATED WITH THE LOSS OF DATA OR PROFITS, WHICH MAY RESULT FROM AN ACTION IN CONTRACT, NEGLIGENCE OR OTHER TORTIOUS CLAIM THAT ARISES OUT OF OR IN CONNECTION WITH THE ACCESS, USE OR PERFORMANCE OF THESE DATA.
+
+AtUser:
+  ## Per-country text. The script picks the 'country' or 'region' variant based on
+  ## which World Bank loss series was used, then substitutes these placeholders:
+  ## area, iso3, mix_year, loss, loss_year, region_name, region_code
+  templates:
+    country:
+      description: >
+          At grid generation mix for {area} ({iso3}), year {mix_year}, with added
+          transmission and distribution (T&D) loss as reported by the World Bank
+          ({loss:.4f} for this country) for {loss_year}.
+      geography_description: >
+          End use in {area}. T&D loss factor is for this country ({iso3}).
+      time_description: &at_user_time >
+          Process year follows World Bank T&D loss year {loss_year}.
+          Upstream at grid mix year is {mix_year}.
+      use_advice: >
+          Use for end-use electricity demand in {area}.
+          Low voltage reference is a U.S. 120 V proxy.
+    region:
+      description: >
+          At grid generation mix for {area} ({iso3}), year {mix_year}, with added
+          transmission and distribution (T&D) loss as reported by the World Bank
+          ({loss:.4f}) for geographic region {region_name} ({region_code}) used
+          as fallback due to lack of country specific data for {loss_year}.
+      geography_description: >
+          End use in {area}. T&D loss factor is for World Bank region
+          {region_name} ({region_code}), not {area} specifically.
+      time_description: *at_user_time
+      use_advice: >
+          Use for end-use electricity demand in {area}.
+          Low voltage reference is a U.S. 120 V proxy.
+          Loss factor is regional.
+
+  technology_description: >
+      Applies T&D loss to the country at grid generation mix. No additional
+      generation technology mapping.
+
+  inventory_method_description: >
+      Attributional LCI method
+
+  modeling_constants_description: >
+      L is the World Bank indicator 'Electric power transmission and distribution
+      losses (% of output)' (EG.ELC.LOSS.ZS), expressed as a fraction of output.
+      Amount on the high voltage input is 1 / (1 - L).
+
+  completeness_description: >
+      No elementary flows. Completeness of the generation mix is that of the
+      upstream at grid process; this process only adds T&D losses.
+
+  data_selection_description: >
+      Latest T&D loss year less than or equal to the
+      linked at grid mix year. Geographic region fallback if no country series;
+      omit if neither is available.
+
+  data_treatment_description: >
+      Static T&D loss factor applied.
+
+  sampling_description: >
+      No uncertainty was assessed.
+
+  data_collection_description: >
+      The World Bank indicator 'Electric power transmission and distribution
+      losses (% of output)' (EG.ELC.LOSS.ZS), from the World Development
+      Indicators, was accessed on August 7 2026.
+
+  sources:
+   - world_bank_eg_elc_loss_zs: World Bank electric power transmission and distribution losses
+
+
+  project_description: *project_description
+
+  intended_application: >
+      End-use (at user) electricity demand in the country, linked to the U.S.
+      Electricity Baseline via the country at grid mix.
+      The background electricity processes incorporate a range of flows that are
+      characterized in several impact categories.
+
+  data_generator:
+      USLCI: 'ERG'
+
+  data_documentor:
+      USLCI: 'ERG'
+
+  publication:
+      flcac_international_electricity: 'ERG, International Electricity'
+
+  reviews:
+    1:
+      reviewType: 'Dependent internal review'
+      reviewers:
+        - USLCI: 'ERG'
+      details: >
+        Internal review of methods and metadata.
+
+  restrictions_description: >
+      The underlying World Bank indicator 'Electric power transmission and
+      distribution losses (% of output)' (EG.ELC.LOSS.ZS; IEA Statistics via
+      World Bank, World Development Indicators) is released under a Creative
+      Commons Attribution 4.0 International Licence (CC BY 4.0).
+
+      These U.S. LCI Database Project data ("Data") are provided by the National Laboratory of the Rockies ("NLR"), operated by the Alliance for Sustainable Energy, LLC ("Alliance") for the US Department of Energy ("DOE") under Contract No. DE-AC36-08GO28308. The United States Government (the "Government") retains and the user acknowledges that the Government retains a non-exclusive, paid-up, irrevocable, worldwide license to publish or reproduce the published form of these data, or allow others to do so, for Government purposes.
+
+      Access to and use of these Data shall impose the following obligations on the user, as set forth in this Agreement. The user is granted the right, without any fee or cost, to use, copy, modify, alter, enhance and distribute these Data for any purpose whatsoever, provided that this entire notice appears in all copies of the Data. Any modification, alteration or enhancement of these data shall be identified and documented by the user. Further, the user agrees to credit the DOE/NLR/Alliance in any publication that results from the use of these Data. The names DOE/NLR/Alliance, however, may not be used in any advertising or publicity to endorse or promote any products or commercial entities unless specific written permission is obtained from DOE/NLR/Alliance. The user also understands that DOE/NLR/Alliance is not obligated to provide the user with any support, consulting, training or assistance of any kind with regard to the use of these Data or to provide the user with any updates, revisions or new versions of these Data.
+
+      YOU AGREE TO INDEMNIFY THE GOVERNMENT AND DOE/NLR/ALLIANCE, AND ITS SUBSIDIARIES, AFFILIATES, OFFICERS, AGENTS, AND EMPLOYEES AGAINST ANY CLAIM OR DEMAND, INCLUDING REASONABLE ATTORNEYS' FEES, RELATED TO YOUR USE OF THESE DATA. THESE DATA ARE PROVIDED BY DOE/NLR/ALLIANCE "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE GOVERNMENT OR DOE/NLR/ALLIANCE BE LIABLE FOR ANY SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER, INCLUDING BUT NOT LIMITED TO CLAIMS ASSOCIATED WITH THE LOSS OF DATA OR PROFITS, WHICH MAY RESULT FROM AN ACTION IN CONTRACT, NEGLIGENCE OR OTHER TORTIOUS CLAIM THAT ARISES OUT OF OR IN CONNECTION WITH THE ACCESS, USE OR PERFORMANCE OF THESE DATA.
+
+UsAverage:
+  description: >
+      US-average resource process represented as a balancing-authority provider
+      mix. Each input exchange links to a BA resource process and uses a
+      normalized weight back-calculated from the process
+      'Electricity; at grid; consumption mix - US - US'.
+
+  time_description: >
+      This process represents the grid mix of the year modeled in the U.S.
+      Electricity Baseline.
+
+  geography_description: >
+      This process represents a US-average mix of balancing-authority resource
+      processes for one fuel.
+
+  technology_description: >
+      Technosphere mixer only: weighted providers of balancing-authority
+      resource processes. No elementary flows.
+
+  inventory_method_description: >
+      Not applicable; this process contains only technosphere flows.
+
+  modeling_constants_description: >
+      Provider weights are contribution = US_BA_weight × BA_resource_fraction,
+      normalized within the resource so BA providers sum to 1.
+
+  completeness_description: >
+      This process contains no elementary flows. Provider weights sum to 1.
+
+  data_selection_description: >
+      Balancing-authority resource shares are taken from the US Electricity
+      Baseline process 'Electricity; at grid; consumption mix - US - US'.
+
+  data_treatment_description: >
+      BA contributions are normalized within each resource to form a US-average
+      provider mix.
+
+  sampling_description: >
+      No uncertainty was assessed.
+
+  data_collection_description: >
+      Not applicable.
+
+  use_advice: >
+      Use as an estimated US-average fuel-resource provider where regional data
+      are unknown. Emissions and other elementary flows come from the linked
+      balancing-authority resource processes, not from this mixer.
+
+  project_description: *project_description
+
+  intended_application: >
+      US-average fuel-resource mixer for use with the U.S. Electricity Baseline.
+
+  data_generator:
+      USLCI: 'ERG'
+
+  data_documentor:
+      USLCI: 'ERG'
+
+  publication:
+      flcac_international_electricity: 'ERG, International Electricity'
+
+  restrictions_description: >
+      These U.S. LCI Database Project data ("Data") are provided by the National Labratory of the Rockies ("NLR"), operated by the Alliance for Sustainable Energy, LLC ("Alliance") for the US Department of Energy ("DOE") under Contract No. DE-AC36-08GO28308. The United States Government (the "Government") retains and the user acknowledges that the Government retains a non-exclusive, paid-up, irrevocable, worldwide license to publish or reproduce the published form of these data, or allow others to do so, for Government purposes.
+
+      Access to and use of these Data shall impose the following obligations on the user, as set forth in this Agreement. The user is granted the right, without any fee or cost, to use, copy, modify, alter, enhance and distribute these Data for any purpose whatsoever, provided that this entire notice appears in all copies of the Data. Any modification, alteration or enhancement of these data shall be identified and documented by the user. Further, the user agrees to credit the DOE/NLR/Alliance in any publication that results from the use of these Data. The names DOE/NLR/Alliance, however, may not be used in any advertising or publicity to endorse or promote any products or commercial entities unless specific written permission is obtained from DOE/NLR/Alliance. The user also understands that DOE/NLR/Alliance is not obligated to provide the user with any support, consulting, training or assistance of any kind with regard to the use of these Data or to provide the user with any updates, revisions or new versions of these Data.
+
+      YOU AGREE TO INDEMNIFY THE GOVERNMENT AND DOE/NLR/ALLIANCE, AND ITS SUBSIDIARIES, AFFILIATES, OFFICERS, AGENTS, AND EMPLOYEES AGAINST ANY CLAIM OR DEMAND, INCLUDING REASONABLE ATTORNEYS' FEES, RELATED TO YOUR USE OF THESE DATA. THESE DATA ARE PROVIDED BY DOE/NLR/ALLIANCE "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE GOVERNMENT OR DOE/NLR/ALLIANCE BE LIABLE FOR ANY SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER, INCLUDING BUT NOT LIMITED TO CLAIMS ASSOCIATED WITH THE LOSS OF DATA OR PROFITS, WHICH MAY RESULT FROM AN ACTION IN CONTRACT, NEGLIGENCE OR OTHER TORTIOUS CLAIM THAT ARISES OUT OF OR IN CONNECTION WITH THE ACCESS, USE OR PERFORMANCE OF THESE DATA.

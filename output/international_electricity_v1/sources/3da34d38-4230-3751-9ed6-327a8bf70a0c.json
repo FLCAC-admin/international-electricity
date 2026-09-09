@@ -1,0 +1,11 @@
+{
+  "@type": "Source",
+  "@id": "3da34d38-4230-3751-9ed6-327a8bf70a0c",
+  "description": "ERG, International Electricity Mixes, 2025",
+  "lastChange": "2026-09-09T12:00:00Z",
+  "name": "ERG, International Electricity",
+  "textReference": "",
+  "url": "https://github.com/FLCAC-admin/international-electricity",
+  "version": "00.00.001",
+  "year": "2025"
+}

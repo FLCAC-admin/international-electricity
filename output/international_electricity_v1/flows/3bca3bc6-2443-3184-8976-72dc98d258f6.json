@@ -1,0 +1,23 @@
+{
+  "@type": "Flow",
+  "@id": "3bca3bc6-2443-3184-8976-72dc98d258f6",
+  "category": "Technosphere flows/22: Utilities/2211: Electric Power Generation, Transmission and Distribution",
+  "flowProperties": [
+    {
+      "conversionFactor": 1.0,
+      "flowProperty": {
+        "@type": "FlowProperty",
+        "@id": "f6811440-ee37-11de-8a39-0800200c9a66",
+        "category": "Technical flow properties",
+        "name": "Energy",
+        "refUnit": "MJ"
+      },
+      "isRefFlowProperty": true
+    }
+  ],
+  "flowType": "PRODUCT_FLOW",
+  "isInfrastructureFlow": false,
+  "lastChange": "2026-06-08T20:44:46.164Z",
+  "name": "Electricity, AC, 120 V",
+  "version": "01.00.000"
+}
