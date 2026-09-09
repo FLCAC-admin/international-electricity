@@ -77,7 +77,11 @@ df = (df.groupby("CountryCode", group_keys=False)
 (df.pivot_table(index=['Year', 'Area', 'CountryCode', 'Unit'],
                          columns=['Fuel'],
                          values='Value', aggfunc='sum')
-             .to_csv('fuel_by_country.csv'))
+             .    to_csv('fuel_by_country.csv'))
+
+## Drop fuels a country does not generate; no need for zero-amount exchanges.
+## Shares already sum to 1 within each country, so the totals are unaffected.
+df = df[df['share'] > 0]
 
 
 #%% Link to fuel specific flows in eLCI and prepare dataframe for oLCA
